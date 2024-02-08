@@ -1,11 +1,73 @@
-const classes = require('./lib/helpers/classes');
-
 module.exports = function (site) {
   const config = {
-    bundles: [ '@apostrophecms-pro/basics' ],
     // Theme name is globally available as apos.options.theme
     theme: site.theme,
     modules: {
+      // Apostrophe module configuration
+      // *******************************
+      //
+      // NOTE: most configuration occurs in the respective modules' directories.
+      // See modules/@apostrophecms/page/index.js for an example.
+      //
+      // Any modules that are not present by default in Apostrophe must at least
+      // have a minimal configuration here to turn them on: `moduleName: {}`
+      // ***********************************************************************
+      // `className` options set custom CSS classes for Apostrophe core widgets.
+      '@apostrophecms/rich-text-widget': {
+        options: {}
+      },
+      '@apostrophecms/image-widget': {
+        options: {
+          className: 'img-fluid'
+        }
+      },
+      '@apostrophecms/video-widget': {
+        options: {}
+      },
+
+      // The main form module
+      '@apostrophecms/form': {
+        options: {
+          shortcut: 'a,f'
+        }
+      },
+      // The form widget module, allowing editors to add forms to content areas
+      '@apostrophecms/form-widget': {},
+      // Form field widgets, used by the main form module to build forms.
+      '@apostrophecms/form-text-field-widget': {},
+      '@apostrophecms/form-textarea-field-widget': {},
+      '@apostrophecms/form-select-field-widget': {},
+      '@apostrophecms/form-radio-field-widget': {},
+      '@apostrophecms/form-file-field-widget': {},
+      '@apostrophecms/form-checkboxes-field-widget': {},
+      '@apostrophecms/form-boolean-field-widget': {},
+      '@apostrophecms/form-conditional-widget': {},
+
+      '@apostrophecms/sitemap': {
+        options: {
+          excludeTypes: [ 'team-member', 'product' ]
+        }
+      },
+      '@apostrophecms/seo': {},
+      '@apostrophecms/open-graph': {},
+
+      // `asset` supports the project's webpack build for client-side assets.
+      helper: {},
+      asset: {},
+      settings: {},
+
+      // The project's first custom page type.
+      'default-page': {},
+      'content-widget-modules': {
+        options: {
+          ignoreNoCodeWarning: true
+        }
+      },
+      'pieces-modules': {
+        options: {
+          ignoreNoCodeWarning: true
+        }
+      },
       '@apostrophecms/uploadfs': {
         options: {
           uploadfs: {
@@ -23,37 +85,8 @@ module.exports = function (site) {
       },
       // Just a nice place to keep our helper functions and macros that are
       // used across all sites
-      helpers: {},
-      'content-placeholder': {},
-      'default-page': {},
 
       // The @apostrophecms/home-page module always exists, no need to activate it here
-
-      // required for bundled modules or extending views
-      '@apostrophecms-pro/basics': {},
-      // optional widgets
-      '@apostrophecms-pro/basics-slideshow-widget': {
-        options: {
-          className: classes.WIDGET
-        }
-      },
-      '@apostrophecms-pro/basics-column-widget': {},
-      '@apostrophecms-pro/basics-button-widget': {
-        options: {
-          className: classes.WIDGET
-        }
-      },
-      '@apostrophecms-pro/basics-card-widget': {
-        options: {
-          className: classes.WIDGET
-        }
-      },
-      '@apostrophecms-pro/basics-hero-widget': {
-        options: {
-          className: classes.WIDGET
-        }
-      },
-      '@apostrophecms-pro/basics-footer-widget': {},
       '@apostrophecms-pro/palette': {},
       '@apostrophecms-pro/document-versions': {},
       websocket: {}

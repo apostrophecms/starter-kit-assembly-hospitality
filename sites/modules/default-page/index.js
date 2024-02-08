@@ -1,3 +1,5 @@
+const areaConfig = require('../../lib/area');
+
 module.exports = {
   extend: '@apostrophecms/page-type',
   options: {
@@ -7,11 +9,10 @@ module.exports = {
     add: {
       main: {
         type: 'area',
-        label: 'Main',
         options: {
-          widgets: {
-            '@apostrophecms-pro/basics-column': {},
-            '@apostrophecms-pro/basics-hero': {}
+          expanded: true,
+          groups: {
+            ...areaConfig.fullExpandedGroup
           }
         }
       }

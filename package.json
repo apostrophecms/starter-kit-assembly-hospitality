@@ -1,7 +1,7 @@
 {
-  "name": "a3-assembly-boilerplate",
-  "version": "1.1.0",
-  "description": "A boilerplate for multisite content-management in A3",
+  "name": "a3-starter-kit-assembly-hospitality",
+  "version": "1.0.0",
+  "description": "Hospitality multisite starter kit for ApostropheCMS",
   "private": true,
   "scripts": {
     "build": "APOS_UPLOADFS_ASSETS=1 NODE_ENV=production bash -c 'node app @apostrophecms/asset:build --site=dashboard && ./scripts/for-each-theme @apostrophecms/asset:build'",
@@ -13,26 +13,35 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/apostrophecms/a3-assembly-boilerplate"
+    "url": "https://github.com/apostrophecms/starter-kit-assembly-hospitality"
   },
   "engines": {
     "node": ">=10.0.0"
   },
   "author": "Apostrophe Technologies",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "dependencies": {
-    "@apostrophecms-pro/basics": "^1.3.0",
     "@apostrophecms-pro/document-versions": "^1.0.1",
     "@apostrophecms-pro/multisite": "^3.8.0",
     "@apostrophecms-pro/palette": "^3.0.2",
+    "@apostrophecms/form": "^1.1.1",
+    "@apostrophecms/open-graph": "^1.2.1",
+    "@apostrophecms/seo": "^1.2.0",
+    "@apostrophecms/sitemap": "^1.0.2",
     "@opentelemetry/auto-instrumentations-node": "^0.37.1",
     "@opentelemetry/exporter-jaeger": "^1.15.0",
     "@opentelemetry/sdk-node": "^0.41.0",
     "@opentelemetry/semantic-conventions": "^1.15.0",
-    "apostrophe": "^3.47.0",
+    "aos": "^2.3.4",
+    "apostrophe": "^3.62.0",
     "node-fetch": "^2.6.5",
-    "qs": "^6.9.6",
-    "require-all": "^3.0.0"
+    "node-geocoder": "^4.2.0",
+    "normalize.css": "^8.0.1",
+    "ol": "^7.3.0",
+    "photoswipe": "^5.3.7",
+    "require-all": "^3.0.0",
+    "rfs": "^10.0.0",
+    "swiper": "^9.2.3"
   },
   "devDependencies": {
     "eslint": "^8.0.0",

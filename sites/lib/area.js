@@ -54,7 +54,7 @@ const tiptapStyles = {
       tag: 'span',
       label: 'Highlight: White',
       class: 'highlight-white'
-    },
+    }
   ],
   simple: {}
 };
@@ -113,8 +113,6 @@ const apostropheWidgets = {
     styles: tiptapStyles.all
   }
 };
-
-
 
 const area = {
   all: {

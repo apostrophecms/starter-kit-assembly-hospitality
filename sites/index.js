@@ -2,6 +2,7 @@ module.exports = function (site) {
   const config = {
     // Theme name is globally available as apos.options.theme
     theme: site.theme,
+    nestedModuleSubdirs: true,
     modules: {
       // Apostrophe module configuration
       // *******************************

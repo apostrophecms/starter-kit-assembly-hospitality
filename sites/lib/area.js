@@ -80,7 +80,7 @@ const tiptapTools = {
     'alignLeft',
     'alignCenter',
     'alignRight',
-    'alignJustify',
+    'alignJustify'
     // '|',
     // 'table',
     // '|',

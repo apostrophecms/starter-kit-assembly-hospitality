@@ -6,9 +6,5 @@ module.exports = [
   {
     value: 'default',
     label: 'Default'
-  },
-  {
-    value: 'demo',
-    label: 'Demo'
   }
 ];

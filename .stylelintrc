@@ -3,5 +3,11 @@
   "rules": {
     "scss/selector-nest-combinators": null,
     "at-rule-disallowed-list": ["extend"]
-  }
+  },
+  "overrides": [
+    {
+      "files": [ "**/*.scss" ],
+      "customSyntax": "postcss-scss"
+    }
+  ]
 }

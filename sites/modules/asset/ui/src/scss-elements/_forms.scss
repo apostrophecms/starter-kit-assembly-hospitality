@@ -1,3 +1,5 @@
+/* stylelint-disable scale-unlimited/declaration-strict-value, color-named, declaration-property-unit-allowed-list, declaration-no-important */
+
 @import "../../../../asset/ui/src/scss/variables";
 
 .my-form {
@@ -12,22 +14,18 @@
   &__fieldset,
   &__input,
   &__legend {
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
   }
 
   &__fieldset,
   &__input,
   &__legend {
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
     appearance: none;
     background-color: transparent;
-    border: none;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
   }
 
   // Form element styling
@@ -36,13 +34,14 @@
     background-color: white;
     border-radius: 0.25rem;
     color: $primary;
+
     &:focus {
       outline: none;
       box-shadow: 0 0 0 0.1rem rgba($primary, 50%);
     }
   }
 
-  &__input:not([type="checkbox"]):not([type="radio"]) {
+  &__input:not([type="checkbox"], [type="radio"]) {
     display: block;
     box-sizing: border-box;
     width: 100%;
@@ -65,13 +64,14 @@
 
   &__input[type="radio"],
   &__input[type="checkbox"] {
-    height: 1.5em;
     width: 1.5em;
+    height: 1.5em;
     vertical-align: middle;
   }
 
   &__input[type="radio"] {
     border-radius: 50%;
+
     &:checked {
       background-image: radial-gradient($primary 40%, transparent calc(40% + 1px));
     }
@@ -94,15 +94,18 @@
     display: inline-block;
     margin: 0 0 0.5rem;
   }
+
   &__fieldset {
     .my-form__label {
       margin: 0;
     }
   }
+
   .apos-form-input,
   .apos-form-fieldset {
     margin-bottom: 1rem;
   }
+
   .my-form__check-wrapper + .my-form__check-wrapper {
     margin-top: 0.5rem;
   }

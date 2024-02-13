@@ -1,9 +1,13 @@
+/* stylelint-disable media-feature-name-allowed-list, scss/dollar-variable-first-in-block, length-zero-no-unit, scss/at-mixin-named-arguments */
+
 @mixin min($bp, $max: "null", $device: "screen") {
   @if $max == "null" {
     @media only #{$device} and (min-width: #{$bp}) {
       @content;
     }
-  } @else {
+  }
+
+ @else {
     @media only #{$device} and (min-width: #{$bp}) and (max-width: #{$max}) {
       @content;
     }
@@ -45,8 +49,8 @@ $container-sizes: (
   padding-left: 1rem;
 
   &:not(.is-fluid) {
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
 
     @each $bp, $container-size in $container-sizes {
       @include min(#{bp(#{$bp})}) {
@@ -59,10 +63,10 @@ $container-sizes: (
 
 @each $bp, $container-size in $container-sizes {
   .container-#{$bp} {
+    width: 100%;
     margin: 0 auto;
     padding-right: 1rem;
     padding-left: 1rem;
-    width: 100%;
 
     $i: index($container-sizes, $bp $container-size);
 

@@ -1,4 +1,6 @@
-@import url("~normalize.css");
+/* stylelint-disable declaration-no-important */
+
+@import "~normalize.css";
 // Responsive font size npm package (https://www.npmjs.com/package/rfs)
 @import "rfs/scss";
 
@@ -37,16 +39,17 @@
 }
 
 body {
-  background: $body-bg;
   width: 100%;
   margin: 0; // 1
+  color: $body-color;
+  background: $body-bg;
   font-family: $body-font-family;
-  @include font-size(1rem);
   font-weight: 400;
   line-height: $line-height-base;
-  color: $body-color;
-  -webkit-text-size-adjust: 100%; // 3
+  text-size-adjust: 100%; // 3
   -webkit-tap-highlight-color: rgba($black, 0); // 4
+
+  @include font-size(1rem);
 }
 
 a {
@@ -73,15 +76,19 @@ a {
 .highlight-primary {
   color: $primary;
 }
+
 .highlight-secondary {
   color: $secondary;
 }
+
 .highlight-tertiary {
   color: $tertiary;
 }
+
 .highlight-black {
   color: $black;
 }
+
 .highlight-white {
   color: $white;
 }

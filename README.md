@@ -83,14 +83,14 @@ You will later be able to set a "shortname" for each site and it will automatica
 
 ### Adding a suffix to your subdomains (optional)
 
-The `shortNameSuffix` configuration option, which defaults to an empty string, allows you to add additional suffix string to every site short name. For example, for a site with short name `cars` and the following configuration:
+The `shortNameSuffix` configuration option, which defaults to an empty string, allows you to add additional suffix string to every site short name. For example, for a site with short name `gourmet` and the following configuration:
 ```js
 multisite({
   // ...
   shortNameSuffix: '-assembly',
 });
 ```
-The resulting base URL for this site will be `http://cars-assembly.localhost:3000`, `https://cars-assembly.staging.your-domain.com`, etc.
+The resulting base URL for this site will be `http://gourmet-assembly.localhost:3000`, `https://gourmet-assembly.staging.your-domain.com`, etc.
 
 These options apply only when the hostname is determined in part by the `shortName` field for the site, so if a production hostname is configured, it will be used exactly as given.
 
@@ -100,7 +100,7 @@ These options apply only when the hostname is determined in part by the `shortNa
 
 ### Changing the locale separator of your subdomains (optional)
 
-The `localeSeparator` configuration option, which defaults to `.`, allows you to change how the subdomains for localized sites (if chosen so) will be built. By default a dot separator will be used. For example, if "Separate Host" is enabled for a particular locale, `fr.cars.your-domain.com` will be the URL of a site with the short name `cars` and the `fr` locale. 
+The `localeSeparator` configuration option, which defaults to `.`, allows you to change how the subdomains for localized sites (if chosen so) will be built. By default a dot separator will be used. For example, if "Separate Host" is enabled for a particular locale, `fr.gourmet.your-domain.com` will be the URL of a site with the short name `gourmet` and the `fr` locale. 
 If you apply the following configuration:
 ```js
 multisite({
@@ -108,7 +108,7 @@ multisite({
   localeSeparator: '-',
 });
 ```
-The hostname above will become `fr-cars.your-domain.com`. 
+The hostname above will become `fr-gourmet.your-domain.com`. 
 
 This option applies only when the hostname is determined in part by the `shortName` field for the site, so if a production hostname is configured for the locale it will be used exactly as given.
 
@@ -359,7 +359,7 @@ The hospitality starter kit uses fonts provided by Google. These are imported in
 #### Maps and Geocoding
 This project comes with a map widget that geocodes addresses to points on the map. Geocoding is provided by [`node-geocoder`](https://www.npmjs.com/package/node-geocoder). You must configure a geocoding service provider and API key in order to use it. [See a list of geocoding service providers](https://github.com/nchaulet/node-geocoder#geocoder-providers-in-alphabetical-order).
 
-To configure your project's geocoding service provider see `modules/content-widget-modules/modules.js`
+To configure your project's geocoding service provider see `sites/modules/content-widget-modules/modules.js`
 
 ```js
   'map-widget': {
@@ -404,7 +404,7 @@ The below Apostrophecms extensions have been included within this starter kit's 
     where $h1-font-size is a rem value determined by a base value.
     
     in this theme a default of 16px: ```$h1-font-size: $font-size-base * 3; // 48px```
-- [ ] **swiper (Slideshows).** The "swiper" package is a JavaScript library for creating responsive and touch-enabled sliders, carousels, and other interactive content on the web. Its usage within this theme is located at modules/content-widget-modules/image-gallery-widget
+- [ ] **swiper (Slideshows).** The "swiper" package is a JavaScript library for creating responsive and touch-enabled sliders, carousels, and other interactive content on the web. Its usage within this theme is located at `sites/modules/content-widget-modules/image-gallery-widget`
 
     You can import it in your JavaScript file using the import statement:
     ```js
@@ -428,7 +428,7 @@ The below Apostrophecms extensions have been included within this starter kit's 
     ```
 - [ ] **photoswipe (Lightbox)** "PhotoSwipe Lightbox" is a plugin for the popular JavaScript library "PhotoSwipe" that simplifies the process of creating responsive image galleries with lightbox functionality. It offers an easy-to-use API for adding lightboxes to your images and is highly customizable and flexible.
 
-    Its usage within this theme is located at `modules/content-widget-modules/image-gallery-widget`, and is applied in conjunction with the swiper npm package.
+    Its usage within this theme is located at `sites/modules/content-widget-modules/image-gallery-widget`, and is applied in conjunction with the swiper npm package.
     
     You can import it in your JavaScript file using the import statement:
     
@@ -486,7 +486,7 @@ The below Apostrophecms extensions have been included within this starter kit's 
     const geocoder = NodeGeocoder(options);
     const geocoderAddress = await geocoder.geocode(data.widget.address);
     ```
-- [ ] **ol (Maps)** The "ol" package is a JavaScript library for creating interactive maps on the web. Its usage within this theme is located at `modules/content-widget-modules/map-widget`
+- [ ] **ol (Maps)** The "ol" package is a JavaScript library for creating interactive maps on the web. Its usage within this theme is located at `sites/modules/content-widget-modules/map-widget`
 
     See a basic example of this package below:
     ```js
@@ -511,7 +511,7 @@ The below Apostrophecms extensions have been included within this starter kit's 
     ```
 - [ ] **AOS (Animations)** Animate On Scroll (AOS) library allows you to animate elements as you scroll down and up. If you scroll back to top, elements will animate to their previous state and are ready to animate again if you scroll down.
 
-    You can import it in your JavaScript file (`modules/asset/ui/src/index.js`) using the import statement:
+    You can import it in your JavaScript file (`sites/modules/asset/ui/src/index.js`) using the import statement:
     
     ```js
     import AOS from 'aos';

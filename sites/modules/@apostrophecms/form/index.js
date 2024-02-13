@@ -34,7 +34,7 @@ module.exports = {
     group: {
       subscription: {
         label: 'Enable Subscriptions',
-        fields: ['subscription', 'emailSubscriptionField']
+        fields: [ 'subscription', 'emailSubscriptionField' ]
       }
     }
   },

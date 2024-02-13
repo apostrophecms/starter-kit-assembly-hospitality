@@ -25,7 +25,7 @@ module.exports = {
     },
     group: {
       basics: {
-        fields: ['title', 'description', 'price']
+        fields: [ 'title', 'description', 'price' ]
       }
     }
   }

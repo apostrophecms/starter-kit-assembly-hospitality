@@ -67,7 +67,7 @@ const link = {
     label: 'Aria label',
     type: 'string',
     help: 'This is used for screen readers and SEO'
-  },
+  }
 };
 
 module.exports = link;

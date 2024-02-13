@@ -6,7 +6,7 @@
     border-radius: $border-radius;
     padding: 2rem;
 
-    @media (min-width: 1024px) {
+    @media (width >= 1024px) {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -30,19 +30,20 @@
     ul {
       display: block;
 
-      @media (min-width: 1024px) {
+      @media (width >= 1024px) {
         display: flex;
       }
     }
 
     li {
-      margin: 1.25rem 0px;
+      margin: 1.25rem 0;
 
-      @media (min-width: 1024px) {
-        margin: 0 1.25rem;
-      }
       a {
         @include inverse-link-style;
+      }
+
+      @media (width >= 1024px) {
+        margin: 0 1.25rem;
       }
     }
   }
@@ -58,9 +59,10 @@
   }
 
   &__copyright {
-    text-align: center;
     margin: 1rem 0;
-    font-weight: bold;
+    text-align: center;
+    font-weight: 700;
+
     p {
       margin: 0;
     }

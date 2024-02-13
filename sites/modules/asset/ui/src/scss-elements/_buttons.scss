@@ -1,15 +1,16 @@
 .btn,
 .my-form__submit {
-  padding: 1rem 2rem;
-  width: 100%;
   display: inline-block;
-  font-weight: $btn-font-weight;
+  width: 100%;
+  padding: 1rem 2rem;
   color: white;
-  text-decoration: none;
   text-align: center;
   transition: background-color $animate-easing;
+  font-weight: $btn-font-weight;
+  text-decoration: none;
   text-transform: uppercase;
   border-radius: $border-radius;
+
   &:hover {
     color: $white;
     background-color: bisque;
@@ -29,9 +30,10 @@
 
 .btn--primary,
 .my-form__submit {
-  background: $primary;
   border: none;
   color: $white;
+  background: $primary;
+
   &:hover {
     color: $white;
     background: lighten($primary, 5%);
@@ -39,9 +41,10 @@
 }
 
 .btn--secondary {
-  background: $secondary;
   border: none;
   color: $btn-secondary-text;
+  background: $secondary;
+
   &:hover {
     color: $primary;
     background: lighten($secondary, 5%);

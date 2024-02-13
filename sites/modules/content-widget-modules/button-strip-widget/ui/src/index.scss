@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   margin: 1.5rem 0;
+
   .btn-widget {
     display: flex;
     align-items: center;
@@ -10,9 +11,11 @@
     &--alignment-left {
       justify-content: flex-start;
     }
+
     &--alignment-center {
       justify-content: center;
     }
+
     &--alignment-right {
       justify-content: flex-end;
     }
@@ -21,8 +24,9 @@
       margin-top: 20px;
     }
 
-    @media only screen and (min-width: 600px) {
+    @media only screen and (width >= 600px) {
       width: auto;
+
       & + .btn-widget {
         margin-top: 0;
         margin-left: 20px;

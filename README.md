@@ -1,8 +1,8 @@
-# Apostrophe Assembly Boilerplate
+# Apostrophe Assembly Hospitality Boilerplate
 
 <!-- TOC is auto generated via VSCode extensions https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one.
 Having it installed in your VSCode will ensure that adding/changing heading will be auto-populated here. -->
-- [Apostrophe Assembly Boilerplate](#apostrophe-assembly-boilerplate)
+- [Apostrophe Assembly Hospitality Boilerplate](#apostrophe-assembly-hospitality-boilerplate)
   - [Purpose](#purpose)
   - [First Steps: required before startup](#first-steps-required-before-startup)
     - [Setting your shortname prefix](#setting-your-shortname-prefix)
@@ -17,7 +17,7 @@ Having it installed in your VSCode will ensure that adding/changing heading will
     - [Software Installation Requirements](#software-installation-requirements)
     - [`/etc/hosts` File Configuration Requirements](#etchosts-file-configuration-requirements)
   - [Starting Up In Development](#starting-up-in-development)
-  - [Scheduling tasks with Apostrophe Assembly hosting](#scheduling-tasks-with-apostrophe-assembly-hosting)
+  - [Scheduling tasks with Apostrophe Assembly Hospitality hosting](#scheduling-tasks-with-apostrophe-assembly-hospitality-hosting)
   - [Site Development](#site-development)
     - [Where Does My Apostrophe Project Code Go?](#where-does-my-apostrophe-project-code-go)
     - [Themes](#themes)
@@ -65,13 +65,13 @@ This boilerplate project includes:
 
 Before you do anything else, set the fallback value for the `shortnamePrefix` option in `app.js` to a unique string for your project, replacing `a3ab-`. This should match your repo name followed by a `-` character. This should be distinct from any other Assembly projects you have, to ensure their MongoDB databases do not conflict in a dev environment.
 
-> MongoDB Atlas note: if you are self-hosting and you plan to use a low-end MongoDB Atlas cluster (below M10), you must use a unique prefix less than 12 characters (before the `-`), even if your repo name is longer. This is not an issue with hosting provided by the Apostrophe Assembly team.
+> MongoDB Atlas note: if you are self-hosting and you plan to use a low-end MongoDB Atlas cluster (below M10), you must use a unique prefix less than 12 characters (before the `-`), even if your repo name is longer. This is not an issue with hosting provided by the Apostrophe Assembly Hospitality team.
 
 ### Configuring your domains
 
 After cloning this project, be sure to edit the `domains.js` file in the root of the project and change the list to match your real project's dev, staging and production domains.
 
-If you are doing local development on your own computer, leave the `dev` domain set to `localhost:3000`. For staging and production, the Apostrophe Assembly team will typically preconfigure this for you and you won't need to worry about DNS or certificates.
+If you are doing local development on your own computer, leave the `dev` domain set to `localhost:3000`. For staging and production, the Apostrophe Assembly Hospitality team will typically preconfigure this for you and you won't need to worry about DNS or certificates.
 
 If you are rolling your own hosting, the recommended approach is to create a DNS "wildcard" `A` record for a subdomain of your actual domain name, like `*.staging.example.com`, and configure `staging.example.com` as the `staging` value in `domains.js`. You'll also need a wildcard SSL certificate for each of staging and production.
 
@@ -79,7 +79,7 @@ You will later be able to set a "shortname" for each site and it will automatica
 
 > In the case of production, you will of course also be able to add a final production domain name for *each* site via the user interface. But you will need a "pre-production" hostname for early content creation. That is where `baseUrlDomains` comes into play even for production.
 >
-> You are not restricted to the environment names `dev`, `staging` and `prod`. However, the first environment configured is assumed to be a local debugging environment for programmers (typically `dev`), and the environment named `prod` is the only one that attempts to serve a site under its `prodHostname`. If you are working with the Apostrophe Assembly team for hosting, ask us for an additional cloud instance for each environment.
+> You are not restricted to the environment names `dev`, `staging` and `prod`. However, the first environment configured is assumed to be a local debugging environment for programmers (typically `dev`), and the environment named `prod` is the only one that attempts to serve a site under its `prodHostname`. If you are working with the Apostrophe Assembly Hospitality team for hosting, ask us for an additional cloud instance for each environment.
 
 ### Adding a suffix to your subdomains (optional)
 
@@ -96,7 +96,7 @@ These options apply only when the hostname is determined in part by the `shortNa
 
 > Note that your dashboard will also be affected, the base URL would become `https://dashboard-assembly.staging.your-domain.com`
 
-> **Note:** This option is not currently supported by Apostrophe Assembly Hosting, as we apply the naming convention for you when hosting for you. It's there for self-hosted customers with different needs.
+> **Note:** This option is not currently supported by Apostrophe Assembly Hospitality Hosting, as we apply the naming convention for you when hosting for you. It's there for self-hosted customers with different needs.
 
 ### Changing the locale separator of your subdomains (optional)
 
@@ -114,7 +114,7 @@ This option applies only when the hostname is determined in part by the `shortNa
 
 > **Note:** Your configuration won't be applied immediately on the existing sites. You need to update ("touch") your site records in order to apply the changes. You can do that for all existing sites via the CLI command `node app site:touch --site=dashboard`. If you do not have the `touch` task, update the apostrophe module to the latest 3.x version.
 
-> **Note:** This option is not currently supported by Apostrophe Assembly Hosting, as we apply the naming convention for you when hosting for you. It's there for self-hosted customers with different needs. 
+> **Note:** This option is not currently supported by Apostrophe Assembly Hospitality Hosting, as we apply the naming convention for you when hosting for you. It's there for self-hosted customers with different needs. 
 
 ### Setting your Dashboard shortname (optional)
 
@@ -129,7 +129,7 @@ With the setting above, the Dashboard application will be available at `http://a
 
 Note that if `shortNameSuffix` is also set, the two options are combined to arrive at the complete dashboard subdomain.
 
-> **Note:** This option is not currently supported by Apostrophe Assembly Hosting. Contact us if this is a concern for your project.
+> **Note:** This option is not currently supported by Apostrophe Assembly Hospitality Hosting. Contact us if this is a concern for your project.
 
 ### Disabled File Key
 
@@ -223,7 +223,7 @@ Now try creating `company2` and `company3`. Notice that while the code is the sa
 
 > If you access these sites while logged out, you won't see your content edits unless you have used the "Commit" button to make them live.
 
-## Scheduling tasks with Apostrophe Assembly hosting
+## Scheduling tasks with Apostrophe Assembly Hospitality hosting
 
 To schedule tasks much like you would with `cron` in a single-server environment, add a new `tasks` option to `app.js` when configuring `@apostrophecms/multisite`. This option is top-level, it's a peer of the `sites` and `dashboard` options.
 
@@ -280,7 +280,7 @@ If you have already started a single-site project, you can move your modules dir
 
 ### Themes
 
-Apostrophe Assembly and the multisite module are designed to accommodate hundreds of websites, or more, running on a single codebase. But, you may need some differences in appearance and behavior that go beyond what the palette editor can provide. For that you can create multiple themes. Each site is set via the dashboard UI to use a single theme and will typically stay with that theme throughout its lifetime.
+Apostrophe Assembly Hospitality and the multisite module are designed to accommodate hundreds of websites, or more, running on a single codebase. But, you may need some differences in appearance and behavior that go beyond what the palette editor can provide. For that you can create multiple themes. Each site is set via the dashboard UI to use a single theme and will typically stay with that theme throughout its lifetime.
 
 You might not need more than one theme. If that's the case, just build out the `default` theme to suit your needs, and remove the `demo` theme from `themes.js`. You can also remove the `sites/modules/theme-demo` module and `sites/lib/theme-demo.js`.
 
@@ -584,7 +584,7 @@ Note the use of `--` by itself as an end marker for the options to Apostrophe, a
 
 ### Hosting with Us
 
-If we are hosting Apostrophe Assembly for you, then you can deploy updates to your staging cloud by pushing to your `staging` git branch, and deploy updates to your production cloud by pushing to your `production` git branch. You will receive notifications in our shared Slack channel, including links to access the deployment progress logs.
+If we are hosting Apostrophe Assembly Hospitality for you, then you can deploy updates to your staging cloud by pushing to your `staging` git branch, and deploy updates to your production cloud by pushing to your `production` git branch. You will receive notifications in our shared Slack channel, including links to access the deployment progress logs.
 
 Apostrophe will complete asset builds for each theme, as well as running any necessary new database migrations for each site, before switching to the newly deployed version of the code.
 
@@ -596,9 +596,9 @@ read the [self-hosting notes](self-hosting.md) before beginning deployment.
 
 ## Profiling with OpenTelemetry
 
-ApostropheCMS supports profiling with OpenTelemetry. There is an [article in the documentation](https://v3.docs.apostrophecms.org/cookbook/opentelemetry.html) covering the use of OpenTelemetry in general. Launching Apostrophe Assembly with OpenTelemetry support is slightly different. However for your convenience, `app.js` and `telemetry.js` are already set up appropriately in this project.
+ApostropheCMS supports profiling with OpenTelemetry. There is an [article in the documentation](https://v3.docs.apostrophecms.org/cookbook/opentelemetry.html) covering the use of OpenTelemetry in general. Launching Apostrophe Assembly Hospitality with OpenTelemetry support is slightly different. However for your convenience, `app.js` and `telemetry.js` are already set up appropriately in this project.
 
-To launch in your local development environment with OpenTelemetry logging to Jaeger, first [launch Jaeger according to the instructions in our documentation](https://v3.docs.apostrophecms.org/cookbook/opentelemetry.html). Then start your Apostrophe Assembly project like this:
+To launch in your local development environment with OpenTelemetry logging to Jaeger, first [launch Jaeger according to the instructions in our documentation](https://v3.docs.apostrophecms.org/cookbook/opentelemetry.html). Then start your Apostrophe Assembly Hospitality project like this:
 
 ```
 APOS_OPENTELEMETRY=1 npm run dev

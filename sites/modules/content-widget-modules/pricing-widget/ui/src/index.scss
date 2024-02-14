@@ -1,0 +1,64 @@
+/* stylelint-disable max-nesting-depth */
+
+@import "../../../../asset/ui/src/scss/variables";
+
+.pricing {
+  background: $secondary;
+
+  &__title {
+    text-align: center;
+  }
+
+  .cards {
+    display: grid;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: initial;
+    grid-template-columns: repeat(auto-fit, minmax(350px, max-content));
+    grid-gap: 2rem;
+  }
+
+  .card {
+    width: 350px;
+    padding: 2rem;
+    color: $primary;
+    background: $white;
+    border-radius: $border-radius;
+
+    &:nth-child(even) {
+      border: 1px solid $tertiary;
+      color: $primary;
+      background: none;
+    }
+
+    &--pricing {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__label {
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: $tertiary;
+      text-transform: uppercase;
+    }
+
+    &__feature-list {
+      padding-left: 0;
+      list-style: none;
+
+      li {
+        display: flex;
+        margin-bottom: 10px;
+      }
+
+      li::before {
+        margin-right: 10px;
+        font-weight: 700;
+        color: $tertiary;
+        content: "\2713";
+      }
+    }
+  }
+}

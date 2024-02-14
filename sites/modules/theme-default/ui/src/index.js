@@ -1,4 +1,5 @@
 export default () => {
+  // eslint-disable-next-line no-console
   console.log('Default theme project level js file');
   // Uncomment to demonstrate a websocket connection
   // // Simple test that works locally and in the cloud: http -> ws, https -> wss

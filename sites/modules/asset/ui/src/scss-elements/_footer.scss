@@ -1,0 +1,72 @@
+/* stylelint-disable media-feature-name-allowed-list, max-nesting-depth */
+
+.footer {
+  background-color: $secondary;
+
+  &__main {
+    background-color: $white;
+    border-radius: $border-radius;
+    padding: 2rem;
+
+    @media (width >= 1024px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+    img {
+      width: 200px;
+      height: auto;
+    }
+  }
+
+  ul {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  &__nav-items {
+    ul {
+      display: block;
+
+      @media (width >= 1024px) {
+        display: flex;
+      }
+    }
+
+    li {
+      margin: 1.25rem 0;
+
+      a {
+        @include inverse-link-style;
+      }
+
+      @media (width >= 1024px) {
+        margin: 0 1.25rem;
+      }
+    }
+  }
+
+  &__social-items {
+    li {
+      margin: 0 1rem;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__copyright {
+    margin: 1rem 0;
+    text-align: center;
+    font-weight: 700;
+
+    p {
+      margin: 0;
+    }
+  }
+}

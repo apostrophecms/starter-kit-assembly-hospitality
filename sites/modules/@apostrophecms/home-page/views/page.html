@@ -1,9 +1,12 @@
-{% extends 'layout.html' %}
-{% import 'content-placeholder:placeholder.html' as placeholder with context -%}
+{#
+  This is an example home page template. It inherits and extends a layout template
+  that lives in the top-level views/ folder for convenience
+#}
+
+{% extends "layout.html" %}
 
 {% block main %}
-  {% area data.page, 'main' %}
-  {% if not data.page.main or not data.page.main.items.length %}
-    {{ placeholder.render() }}
-  {% endif %}
+  <section>
+    {% area data.page, 'main' %}
+  </section>
 {% endblock %}

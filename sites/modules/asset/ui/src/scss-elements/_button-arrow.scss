@@ -1,0 +1,48 @@
+/* stylelint-disable declaration-property-unit-allowed-list, scale-unlimited/declaration-strict-value, max-nesting-depth */
+
+.button-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  color: $primary;
+  background: $secondary;
+  transition: background-color $animate-easing;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    background: lighten($secondary, 10%);
+  }
+}
+
+.swiper-button-arrows {
+  .button-arrow {
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--prev {
+      left: 0.5rem;
+    }
+
+    &--next {
+      right: 0.5rem;
+
+      .button-arrow__icon {
+        transform: rotate(180deg);
+      }
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0.4;
+      cursor: auto;
+
+      &:hover {
+        background: $secondary;
+      }
+    }
+  }
+}

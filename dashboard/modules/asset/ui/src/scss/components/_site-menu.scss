@@ -1,7 +1,9 @@
+/* stylelint-disable selector-no-qualifying-type */
+
 .c-site-menu {
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
+  justify-content: space-between;
   margin-top: 50px;
   margin-bottom: 50px;
   padding-bottom: 20px;
@@ -20,13 +22,13 @@
     display: flex;
 
     svg {
+      align-self: flex-end;
       width: 11px;
       margin-left: 10px;
-      align-self: flex-end;
     }
 
     svg g, svg path {
-      fill: currentColor;
+      fill: currentcolor;
     }
   }
 

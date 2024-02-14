@@ -16,8 +16,8 @@ const widgets = {
 module.exports = {
   options: {
     alias: 'helpers',
-    baseTextStyles: baseTextStyles,
-    baseTextToolbar: baseTextToolbar
+    baseTextStyles,
+    baseTextToolbar
   },
   helpers(self, options) {
     return {

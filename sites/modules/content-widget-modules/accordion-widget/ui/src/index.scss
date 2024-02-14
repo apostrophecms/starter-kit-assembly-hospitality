@@ -1,0 +1,44 @@
+@import "../../../../asset/ui/src/scss/variables";
+
+.accordion {
+  &__item {
+    border-top: 1px solid $primary;
+
+    &:last-child {
+      border-bottom: 1px solid $primary;
+    }
+  }
+
+  &__heading {
+    margin: 0;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: none;
+    color: $primary;
+    text-align: left;
+    background-color: transparent;
+    cursor: pointer;
+    user-select: none;
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &[aria-expanded="false"] .accordion__button-icon::after {
+      content: "\002B";
+    }
+
+    &[aria-expanded="true"] .accordion__button-icon::after {
+      content: "\2212";
+    }
+  }
+
+  &__button,
+  &__content {
+    padding: 1rem 1.5rem;
+  }
+}

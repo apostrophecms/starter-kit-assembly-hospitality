@@ -32,9 +32,9 @@
 
   .apos-admin-bar-inner {
     display: flex;
-    font-size: $font-12;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    font-size: $font-12;
   }
 
   .apos-admin-bar-item {
@@ -70,5 +70,5 @@
 
 .apos-ui .apos-admin-bar .apos-admin-bar-item .apos-dropdown.apos-active .apos-admin-bar-item-inner {
   background-color: $white;
-  box-shadow: 0 2px 7px 2px rgba(21, 22, 22, 0.23);
+  box-shadow: 0 2px 7px 2px rgb(21 22 22 / 23%);
 }

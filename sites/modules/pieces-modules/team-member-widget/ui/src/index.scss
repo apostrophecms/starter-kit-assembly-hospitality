@@ -1,0 +1,39 @@
+/* stylelint-disable declaration-property-unit-allowed-list, media-feature-name-allowed-list */
+
+@import "../../../../asset/ui/src/scss/variables";
+
+.team-widget {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, max-content));
+  grid-gap: 2rem;
+  justify-content: space-around;
+
+  &__profile {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__profile-image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__work-title {
+    text-transform: uppercase;
+  }
+
+  @media only screen and (width >= 900px) {
+    justify-content: center;
+
+    &--three-col {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &--four-col {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}

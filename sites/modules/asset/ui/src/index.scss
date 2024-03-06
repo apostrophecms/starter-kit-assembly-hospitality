@@ -63,11 +63,14 @@ body {
   background-color: #ebebeb;
 }
 
-[data-apos-refreshable] {
+body:not(.apos-login-page) [data-apos-refreshable] {
   border-style: solid;
   margin: 0 auto;
 }
 
+.apos-login-page [data-apos-refreshable] {
+  max-width: unset;
+}
 
 
 .img-fluid {

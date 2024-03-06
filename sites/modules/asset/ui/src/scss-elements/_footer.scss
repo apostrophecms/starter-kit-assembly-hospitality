@@ -4,7 +4,6 @@
   background-color: $secondary;
 
   &__main {
-    background-color: $white;
     border-radius: $border-radius;
     padding: 2rem;
 
@@ -40,9 +39,9 @@
     li {
       margin: 1.25rem 0;
 
-      a {
-        @include inverse-link-style;
-      }
+      // a {
+      //   @include inverse-link-style;
+      // }
 
       @media (width >= 1024px) {
         margin: 0 1.25rem;

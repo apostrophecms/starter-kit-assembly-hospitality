@@ -2,23 +2,23 @@ const tiptapStyles = {
   all: [
     {
       tag: 'p',
-      label: 'Paragraph (P)'
+      label: 'Paragraph (P)',
+      class: 'body-copy'
     },
     {
       tag: 'h1',
-      label: 'Heading 1 (H1)'
+      label: 'Heading 1 (H1)',
+      class: 'heading-1'
     },
     {
       tag: 'h2',
-      label: 'Heading 2 (H2)'
+      label: 'Heading 2 (H2)',
+      class: 'heading-2'
     },
     {
       tag: 'h3',
-      label: 'Heading 3 (H3)'
-    },
-    {
-      tag: 'h4',
-      label: 'Heading 4 (H4)'
+      label: 'Heading 3 (H3)',
+      class: 'heading-3'
     },
     {
       tag: 'span',

@@ -14,7 +14,7 @@
   border-radius: $border-radius;
 
   &:hover {
-    color: $white;
+    // color: $white;
     background-color: bisque;
     text-decoration: none;
   }
@@ -37,7 +37,6 @@
   background: $primary;
 
   &:hover {
-    color: $white;
     background: lighten($primary, 5%);
   }
 }
@@ -48,7 +47,6 @@
   background: $secondary;
 
   &:hover {
-    color: $primary;
     background: lighten($secondary, 5%);
   }
 }

@@ -103,10 +103,16 @@ module.exports = function (site) {
       },
       '@apostrophecms-pro/automatic-translation': {
         options: {
-          provider: 'deepl'
+          provider: 'azure'
         }
       },
-      '@apostrophecms-pro/automatic-translation-deepl': {},
+      '@apostrophecms-pro/automatic-translation-azure': {},
+      '@apostrophecms-pro/seo-assistant': {
+        options: {
+          provider: 'openai'
+        }
+      },
+      '@apostrophecms-pro/seo-assistant-openai': {},  
       websocket: {}
     }
   };

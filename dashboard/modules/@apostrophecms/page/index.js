@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   options: {
     // Currently the best way to lock the page type of
     // the home page to something other than the default

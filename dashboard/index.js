@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   modules: {
     '@apostrophecms/uploadfs': {
       options: {
@@ -21,7 +21,13 @@ module.exports = {
       }
     },
     'site-page': {},
-    asset: {}
+    asset: {},
+    '@apostrophecms/vite': {},
+    '@apostrophecms/asset': {
+      options: {
+        hmr: 'public',  // Default - enables HMR for project UI
+      }
+    }
   },
   privateDashboards: true
 };

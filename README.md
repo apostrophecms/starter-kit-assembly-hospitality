@@ -39,7 +39,6 @@ Having it installed in your VSCode will ensure that adding/changing heading will
   - [Deployment and Hosting](#deployment-and-hosting)
     - [Hosting with Us](#hosting-with-us)
     - [Self-hosting](#self-hosting)
-  - [Profiling with OpenTelemetry](#profiling-with-opentelemetry)
   - [Apostrophe starter kits](#apostrophe-starter-kits)
 
 ## Purpose
@@ -593,22 +592,6 @@ Apostrophe will complete asset builds for each theme, as well as running any nec
 See [self-hosting](self-hosting.md) for more information about self-hosting with
 the provided `Dockerfile`. There are a number of important details to consider, so be sure to
 read the [self-hosting notes](self-hosting.md) before beginning deployment.
-
-## Profiling with OpenTelemetry
-
-ApostropheCMS supports profiling with OpenTelemetry. There is an [article in the documentation](https://v3.docs.apostrophecms.org/cookbook/opentelemetry.html) covering the use of OpenTelemetry in general. Launching Apostrophe Assembly Hospitality with OpenTelemetry support is slightly different. However for your convenience, `app.js` and `telemetry.js` are already set up appropriately in this project.
-
-To launch in your local development environment with OpenTelemetry logging to Jaeger, first [launch Jaeger according to the instructions in our documentation](https://v3.docs.apostrophecms.org/cookbook/opentelemetry.html). Then start your Apostrophe Assembly Hospitality project like this:
-
-```
-APOS_OPENTELEMETRY=1 npm run dev
-```
-
-This provides a great deal of visibility into where the time is going when Apostrophe responds to a request. Note that separate hosts can be distinguished via the `http.host` tag attached to each request in Jaeger.
-
-Using OpenTelemetry in a staging environment provided by the Apostrophe team is possible. This involves modifying the provided `telemetry.js` file to log to a hosted backend such as [New Relic](https://docs.newrelic.com/docs/more-integrations/open-source-telemetry-integrations/opentelemetry/opentelemetry-introduction/) using an appropriate Open Telemetry exporter module. `process.env.ENV` can be used to distinguish between `dev` or no setting (usually local development), `staging` and `prod` when decidig whether to enable an OpenTelemetry backend.
-
-We do not recommend enabling OpenTelemetry in production, at least not permanently, because of the performance impact of the techniques OpenTelemetry uses to obtain the necessary visibility into async calls.
 
 ## Apostrophe starter kits
 

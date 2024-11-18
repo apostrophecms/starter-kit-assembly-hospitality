@@ -1,6 +1,6 @@
-const choices = require('../choices');
+import choices from '../choices.js';
 
-const config = {
+export default {
   add: {
     headerBgColor: {
       label: 'Background color',
@@ -58,5 +58,3 @@ const config = {
     }
   }
 };
-
-module.exports = config;

@@ -206,4 +206,4 @@ const area = {
   }
 };
 
-module.exports = area;
+export default area;

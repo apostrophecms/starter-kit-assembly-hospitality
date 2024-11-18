@@ -100,4 +100,4 @@ const aos = {
   }
 };
 
-module.exports = aos;
+export default aos;

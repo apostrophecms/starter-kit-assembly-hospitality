@@ -1,11 +1,11 @@
-const choices = require('../choices');
+import choices from '../choices.js';
 
 const h1 = baseProperties('heading1', 'Heading 1', '.heading-1');
 const h2 = baseProperties('heading2', 'Heading 2', '.heading-2');
 const h3 = baseProperties('heading3', 'Heading 3', '.heading-3');
 const p = baseProperties('body', 'Body Copy', '.body-copy');
 
-module.exports = {
+export default {
   add: {
     ...h1.fields,
     ...h2.fields,

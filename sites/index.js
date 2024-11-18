@@ -1,4 +1,4 @@
-module.exports = function (site) {
+export default async function(site) {
   const config = {
     // Theme name is globally available as apos.options.theme
     theme: site.theme,
@@ -113,11 +113,17 @@ module.exports = function (site) {
         }
       },
       '@apostrophecms-pro/seo-assistant-openai': {},  
-      websocket: {}
+      websocket: {},
+      '@apostrophecms/vite': {},
+      '@apostrophecms/asset': {
+        options: {
+          hmr: 'apos'
+        }
+      }
     }
   };
   // Allow each theme to modify the configuration object,
   // enabling additional modules etc.
-  require(`./lib/theme-${site.theme}.js`)(site, config);
+  (await import(`./lib/theme-${site.theme}.js`)).default(site, config);  
   return config;
 };

@@ -1,8 +1,8 @@
-const qs = require('qs');
-const linkSchema = require('../../../lib/linkSchema');
-const buttonSchema = require('../../../lib/buttonSchema');
+import qs from 'qs';
+import linkSchema from '../../../lib/linkSchema.js';
+import buttonSchema from '../../../lib/buttonSchema.js';
 
-module.exports = {
+export default {
   fields: {
     add: {
       logo: {

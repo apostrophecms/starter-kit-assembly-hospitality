@@ -2,5 +2,9 @@
   "extends": "apostrophe",
   "globals": {
     "apos": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2022
   }
 }

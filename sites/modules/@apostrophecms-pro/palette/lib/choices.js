@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   BASE_SIZES: [
     {
       label: '14px',

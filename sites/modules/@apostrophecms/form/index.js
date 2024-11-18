@@ -1,6 +1,6 @@
-const areaConfig = require('../../../lib/area');
+import areaConfig from '../../../lib/area.js';
 
-module.exports = {
+export default {
   options: {
     classPrefix: 'my-form',
     formWidgets: {

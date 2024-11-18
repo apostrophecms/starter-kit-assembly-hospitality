@@ -1,6 +1,6 @@
-const themes = require('../../../themes');
+import themes from '../../../themes.js';
 
-module.exports = {
+export default {
   improve: 'site',
   fields: {
     add: {

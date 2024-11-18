@@ -2,7 +2,7 @@
   "delay": 1000,
   "verbose": true,
   "watch": [
-    "./app.js",
+    "./app.cjs",
     "./dashboard/index.js",
     "./dashboard/modules/**/*",
     "./dashboard/lib/**/*.js",

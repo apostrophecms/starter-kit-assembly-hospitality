@@ -1,4 +1,4 @@
-const config = {
+export default {
   add: {
     footerBgColor: {
       label: 'Background color',
@@ -47,5 +47,3 @@ const config = {
     }
   }
 };
-
-module.exports = config;

@@ -1,6 +1,6 @@
-const choices = require('../choices');
+import choices from '../choices.js';
 
-module.exports = {
+export default {
   add: {
     buttonVPadding: {
       label: 'Vertical Padding',

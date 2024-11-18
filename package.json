@@ -21,9 +21,12 @@
   "author": "Apostrophe Technologies",
   "license": "MIT",
   "dependencies": {
+    "@apostrophecms-pro/automatic-translation": "github:apostrophecms/automatic-translation#main",
     "@apostrophecms-pro/document-versions": "^1.0.1",
-    "@apostrophecms-pro/multisite": "^3.8.0",
-    "@apostrophecms-pro/palette": "^3.0.2",
+    "@apostrophecms-pro/multisite": "^4.0.0",
+    "@apostrophecms-pro/multisite-dashboard": "^1.4.0",
+    "@apostrophecms-pro/palette": "^4.0.0",
+    "@apostrophecms-pro/seo-assistant": "^1.1.1",
     "@apostrophecms/form": "^1.1.1",
     "@apostrophecms/open-graph": "^1.2.1",
     "@apostrophecms/seo": "^1.2.0",
@@ -33,7 +36,7 @@
     "@opentelemetry/sdk-node": "^0.41.0",
     "@opentelemetry/semantic-conventions": "^1.15.0",
     "aos": "^2.3.4",
-    "apostrophe": "^3.62.0",
+    "apostrophe": "^4.0.0",
     "node-fetch": "^2.6.5",
     "node-geocoder": "^4.2.0",
     "normalize.css": "^8.0.1",
@@ -47,8 +50,8 @@
   "devDependencies": {
     "eslint": "^8.0.0",
     "eslint-config-apostrophe": "^4.0.0",
+    "nodemon": "^3.0.1",
     "stylelint": "^15.0.0",
-    "stylelint-config-apostrophe": "^3.0.0",
-    "nodemon": "^3.0.1"
+    "stylelint-config-apostrophe": "^3.0.0"
   }
 }

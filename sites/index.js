@@ -90,6 +90,29 @@ module.exports = function (site) {
       // The @apostrophecms/home-page module always exists, no need to activate it here
       '@apostrophecms-pro/palette': {},
       '@apostrophecms-pro/document-versions': {},
+      '@apostrophecms/i18n': {
+        options: {
+          defaultAdminLocale: 'en',
+          adminLocales: [
+            {
+              label: 'English',
+              value: 'en'
+            },
+          ]
+        }
+      },
+      '@apostrophecms-pro/automatic-translation': {
+        options: {
+          provider: 'azure'
+        }
+      },
+      '@apostrophecms-pro/automatic-translation-azure': {},
+      '@apostrophecms-pro/seo-assistant': {
+        options: {
+          provider: 'openai'
+        }
+      },
+      '@apostrophecms-pro/seo-assistant-openai': {},  
       websocket: {}
     }
   };

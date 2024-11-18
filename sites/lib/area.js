@@ -120,7 +120,7 @@ const area = {
     'call-to-action': {},
     'custom-form': {},
     'image-gallery': {},
-    product: {},
+    // product: {},
     'side-by-side': {},
     'rich-text': {},
     image: {},
@@ -129,7 +129,7 @@ const area = {
     // Marketing widgets
     accordion: {},
     pricing: {},
-    'team-member': {}
+    // 'team-member': {}
   },
   columnExpandedGroup: {
     basic: {
@@ -156,8 +156,8 @@ const area = {
         'image-gallery': {},
         map: {},
         pricing: {},
-        product: {},
-        'team-member': {}
+        // product: {},
+        // 'team-member': {}
       },
       columns: 3
     }
@@ -198,8 +198,8 @@ const area = {
         'custom-form': {},
         map: {},
         pricing: {},
-        product: {},
-        'team-member': {}
+        // product: {},
+        // 'team-member': {}
       },
       columns: 3
     }

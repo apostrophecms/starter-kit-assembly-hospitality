@@ -5,6 +5,14 @@
 module.exports = [
   {
     value: 'default',
-    label: 'Default'
+    label: 'Default Site'
+  },
+  {
+    value: 'local',
+    label: 'Local Agency'
+  },
+  {
+    value: 'state',
+    label: 'State Agency'
   }
 ];

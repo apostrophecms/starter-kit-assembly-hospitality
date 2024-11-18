@@ -1,6 +1,16 @@
 module.exports = function(site, config) {
   config.modules = {
     ...config.modules,
-    'theme-default': {}
+    
+    // Theme specific Assets and Helpers
+    'theme-default': {},
+
+    // Theme specific Pieces
+    product: {},
+    'team-member': {},
+
+    // Related Pieces Widgets
+    'product-widget': {},
+    'team-member-widget': {}
   };
 };

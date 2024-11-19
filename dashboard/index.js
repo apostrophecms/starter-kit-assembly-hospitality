@@ -3,6 +3,7 @@ module.exports = {
     '@apostrophecms/uploadfs': {
       options: {
         uploadfs: {
+          // Should be changed to be a unique key
           disabledFileKey: 'CHANGEME'
         }
       }
@@ -14,9 +15,9 @@ module.exports = {
         baseUrlDomains: {
           local: 'localhost:3000',
           // Should be a real registered domain or subdomain with a DNS wildcard pointing to the cloud
-          staging: 'staging.hospitality.apos.dev',
+          staging: 'staging.demo.apos.dev',
           // Should be a real registered domain or subdomain with a DNS wildcard pointing to the cloud
-          prod: 'hospitality.apos.dev'
+          prod: 'demo.apos.dev'
         }
       }
     },

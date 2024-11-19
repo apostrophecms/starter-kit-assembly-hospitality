@@ -13,6 +13,8 @@ module.exports = function (site) {
       // Any modules that are not present by default in Apostrophe must at least
       // have a minimal configuration here to turn them on: `moduleName: {}`
       // ***********************************************************************
+
+      // Configuration of core ApostropheCMS widgets
       // `className` options set custom CSS classes for Apostrophe core widgets.
       '@apostrophecms/rich-text-widget': {
         options: {}
@@ -26,7 +28,8 @@ module.exports = function (site) {
         options: {}
       },
 
-      // The main form module
+      // Configuration for the Apostrophe Form extension
+      // https://apostrophecms.com/extensions/form-builder-2
       '@apostrophecms/form': {
         options: {
           shortcut: 'a,f'
@@ -44,52 +47,48 @@ module.exports = function (site) {
       '@apostrophecms/form-boolean-field-widget': {},
       '@apostrophecms/form-conditional-widget': {},
 
+      // Configuration for the Apostrophe Sitemap extension
+      // https://apostrophecms.com/extensions/site-maps
       '@apostrophecms/sitemap': {
         options: {
           excludeTypes: [ 'team-member', 'product' ]
         }
       },
+
+      // Enabling the SEO and Open Graph extensions
+      // These don't require any configuration for our needs in this project
+      // https://apostrophecms.com/extensions/seo-tools-3
       '@apostrophecms/seo': {},
+      // https://github.com/apostrophecms/open-graph
       '@apostrophecms/open-graph': {},
 
-      // `asset` supports the project's webpack build for client-side assets.
-      helper: {},
-      asset: {},
-      settings: {},
-
-      // The project's first custom page type.
-      'default-page': {},
-      'content-widget-modules': {
-        options: {
-          ignoreNoCodeWarning: true
-        }
-      },
-      'pieces-modules': {
-        options: {
-          ignoreNoCodeWarning: true
-        }
-      },
+      // Configuration of core security settings - make sure to change these
       '@apostrophecms/uploadfs': {
         options: {
           uploadfs: {
-            // Be sure to change
-            disabledFileKey: 'CHANGEME'
+          // Should be changed to be a unique key
+          disabledFileKey: 'CHANGEME'
           }
         }
       },
       '@apostrophecms/express': {
         options: {
           session: {
-            secret: 'CHANGEME'
+          // Should be changed to be a unique key
+          secret: 'CHANGEME'
           }
         }
       },
-      // Just a nice place to keep our helper functions and macros that are
-      // used across all sites
 
-      // The @apostrophecms/home-page module always exists, no need to activate it here
+      // Enabling the Palette and Document Versions extensions
+      // These don't require any configuration for our needs in this project
+      // https://apostrophecms.com/extensions/palette-3
       '@apostrophecms-pro/palette': {},
+      // https://apostrophecms.com/extensions/document-version
       '@apostrophecms-pro/document-versions': {},
+
+      // Configuration of the core i18n module for multi-language support
+      // https://docs.apostrophecms.org/reference/modules/i18n.html
       '@apostrophecms/i18n': {
         options: {
           defaultAdminLocale: 'en',
@@ -101,23 +100,52 @@ module.exports = function (site) {
           ]
         }
       },
+
+      // Configuration of AI-powered extensions (Automatic Translation and SEO Assistant)
+      // These require API keys to be set as environment variables
+      // https://apostrophecms.com/extensions/automatic-translation
       '@apostrophecms-pro/automatic-translation': {
         options: {
           provider: 'azure'
         }
       },
       '@apostrophecms-pro/automatic-translation-azure': {},
+      // https://apostrophecms.com/extensions/seo-assistant
       '@apostrophecms-pro/seo-assistant': {
         options: {
           provider: 'openai'
         }
       },
-      '@apostrophecms-pro/seo-assistant-openai': {},  
+      '@apostrophecms-pro/seo-assistant-openai': {},
+
+      // Project level modules unique to this demo app
+      // ********************************************************
+      // `helper` is a module where we can add various re-usable functions
+      helper: {},
+      // `asset` supports the project's webpack build for client-side assets.
+      asset: {},
+      settings: {},
+      // Configuration for the behavior of the `default` page type
+      'default-page': {},
+      // Additional Widget modules contained in the `content-widget-modules` directory
+      'content-widget-modules': {
+        options: {
+          ignoreNoCodeWarning: true
+        }
+      },
+      // Additional Piece modules contained in the `content-widget-modules` directory
+      'pieces-modules': {
+        options: {
+          ignoreNoCodeWarning: true
+        }
+      },
+      // Example of project level implementation of core websocket support
       websocket: {}
     }
   };
-  // Allow each theme to modify the configuration object,
-  // enabling additional modules etc.
+
+  // Iterates over additional configuration for each individual theme
+  // and applies that to the global site configuration
   require(`./lib/theme-${site.theme}.js`)(site, config);
   return config;
 };

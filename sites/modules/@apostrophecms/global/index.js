@@ -2,7 +2,7 @@ import qs from 'qs';
 import linkSchema from '../../../lib/linkSchema.js';
 import buttonSchema from '../../../lib/buttonSchema.js';
 
-module.exports = {
+export default {
   fields: {
     add: {
       logo: {

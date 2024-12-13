@@ -9,52 +9,6 @@ export default {
     baseUrlDomains,
     localizedSites: true
   },
-  fields: {
-    add: {
-      logo: {
-        label: 'Logo',
-        type: 'area',
-        options: {
-          widgets: {
-            '@apostrophecms/image': {
-              aspectRatio: [ 1, 1 ],
-              minSize: [ 500, 500 ],
-              max: 1
-            }
-          },
-          max: 1
-        }
-      },
-      theme: {
-        type: 'select',
-        label: 'Theme',
-        choices: themes,
-        def: themes[0].value,
-        required: true
-      }
-    },
-    group: {
-      basics: {
-        label: 'Basics',
-        fields: [
-          'title',
-          'theme',
-          'logo',
-          'active',
-          'shortName',
-          'adminPassword'
-        ]
-      },
-      production: {
-        label: 'Production',
-        fields: [
-          'prodHostname',
-          'canonicalize',
-          'canonicalizeStatus'
-        ]
-      }
-    }
-  },
   tasks(self, options) {
     return {
       'list-themes': {

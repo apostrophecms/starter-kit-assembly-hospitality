@@ -1,4 +1,5 @@
 export default {
+  root: import.meta,
   privateDashboards: true,
   modules: {
     '@apostrophecms/uploadfs': {

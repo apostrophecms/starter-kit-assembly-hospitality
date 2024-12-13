@@ -1,4 +1,4 @@
-import { navButton } from './js/nav-buttons';
+import { navButton } from './js/nav-buttons.js';
 import AOS from 'aos';
 
 export default () => {

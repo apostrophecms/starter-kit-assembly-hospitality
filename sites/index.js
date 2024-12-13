@@ -1,5 +1,6 @@
 export default async function (site) {
   const config = {
+    root: import.meta,
     // Theme name is globally available as apos.options.theme
     theme: site.theme,
     nestedModuleSubdirs: true,
@@ -55,7 +56,6 @@ export default async function (site) {
       // `asset` supports the project's webpack build for client-side assets.
       helper: {},
       asset: {},
-      settings: {},
 
       // The project's first custom page type.
       'default-page': {},

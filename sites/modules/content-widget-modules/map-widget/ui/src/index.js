@@ -1,13 +1,13 @@
-import Map from 'ol/Map';
-import View from 'ol/View';
-import TileLayer from 'ol/layer/Tile';
+import Map from 'ol/Map.js';
+import View from 'ol/View.js';
+import TileLayer from 'ol/layer/Tile.js';
 import VectorLayer from 'ol/layer/Vector.js';
-import XYZ from 'ol/source/XYZ';
+import XYZ from 'ol/source/XYZ.js';
 import Feature from 'ol/Feature.js';
 import Point from 'ol/geom/Point.js';
 import VectorSource from 'ol/source/Vector.js';
-import { fromLonLat } from 'ol/proj';
-import { Icon, Style } from 'ol/style';
+import { fromLonLat } from 'ol/proj.js';
+import { Icon, Style } from 'ol/style.js';
 
 export default () => {
   apos.util.widgetPlayers.map = {

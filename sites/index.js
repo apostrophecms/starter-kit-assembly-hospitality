@@ -90,6 +90,8 @@ export default async function (site) {
       // The @apostrophecms/home-page module always exists, no need to activate it here
       '@apostrophecms-pro/palette': {},
       '@apostrophecms-pro/document-versions': {},
+      // Use Vite bundler
+    '@apostrophecms/vite': {},
       websocket: {}
     }
   };

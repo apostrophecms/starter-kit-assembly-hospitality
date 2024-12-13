@@ -13,6 +13,8 @@ export default {
     helper: {},
     site: {},
     'site-page': {},
-    asset: {}
+    asset: {},
+    // Use Vite bundler
+    '@apostrophecms/vite': {}
   }
 };

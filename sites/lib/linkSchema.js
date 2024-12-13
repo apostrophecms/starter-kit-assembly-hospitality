@@ -1,4 +1,4 @@
-const link = {
+export default {
   linkText: {
     label: 'Link Text',
     type: 'string'
@@ -69,5 +69,3 @@ const link = {
     help: 'This is used for screen readers and SEO'
   }
 };
-
-module.exports = link;

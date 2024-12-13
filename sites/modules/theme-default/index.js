@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   // This is a good place to add theme specific
   // variations on helpers; since the active theme
   // is aliased as `apos.theme` these can be called easily

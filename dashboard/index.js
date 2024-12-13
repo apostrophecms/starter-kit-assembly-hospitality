@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   privateDashboards: true,
   modules: {
     '@apostrophecms/uploadfs': {
@@ -8,6 +8,7 @@ module.exports = {
         }
       }
     },
+    '@apostrophecms-pro/multisite-dashboard': {},
     helper: {},
     site: {},
     'site-page': {},

@@ -2,23 +2,23 @@ const tiptapStyles = {
   all: [
     {
       tag: 'p',
-      label: 'Paragraph (P)',
-      class: 'body-copy'
+      label: 'Paragraph (P)'
     },
     {
       tag: 'h1',
-      label: 'Heading 1 (H1)',
-      class: 'heading-1'
+      label: 'Heading 1 (H1)'
     },
     {
       tag: 'h2',
-      label: 'Heading 2 (H2)',
-      class: 'heading-2'
+      label: 'Heading 2 (H2)'
     },
     {
       tag: 'h3',
-      label: 'Heading 3 (H3)',
-      class: 'heading-3'
+      label: 'Heading 3 (H3)'
+    },
+    {
+      tag: 'h4',
+      label: 'Heading 4 (H4)'
     },
     {
       tag: 'span',
@@ -114,7 +114,7 @@ const apostropheWidgets = {
   }
 };
 
-const area = {
+export default {
   all: {
     columns: {},
     'call-to-action': {},
@@ -205,5 +205,3 @@ const area = {
     }
   }
 };
-
-module.exports = area;

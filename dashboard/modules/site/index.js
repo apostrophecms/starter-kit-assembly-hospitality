@@ -1,11 +1,12 @@
-const fs = require('fs');
-const fetch = require('node-fetch');
+import fs from 'fs';
+import fetch from 'node-fetch';
 
-const themes = require('../../../themes');
+import themes from '../../../themes.js';
+import baseUrlDomains from '../../../domains.js';
 
-module.exports = {
+export default {
   options: {
-    baseUrlDomains: require('../../../domains.js'),
+    baseUrlDomains,
     localizedSites: true
   },
   fields: {

@@ -1,4 +1,4 @@
-const aos = {
+export default {
   animationEffects: {
     label: 'Animation Effect Style',
     type: 'select',
@@ -99,5 +99,3 @@ const aos = {
     ]
   }
 };
-
-module.exports = aos;

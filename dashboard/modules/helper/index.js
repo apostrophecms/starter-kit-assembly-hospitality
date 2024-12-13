@@ -13,7 +13,7 @@ const widgets = {
   gallery: {}
 };
 
-module.exports = {
+export default {
   options: {
     alias: 'helpers',
     baseTextStyles,

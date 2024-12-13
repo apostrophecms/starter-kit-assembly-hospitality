@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   fields: {
     remove: [ '_tags' ]
   },

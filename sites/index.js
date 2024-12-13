@@ -1,4 +1,4 @@
-module.exports = function (site) {
+export default async function (site) {
   const config = {
     // Theme name is globally available as apos.options.theme
     theme: site.theme,
@@ -95,6 +95,8 @@ module.exports = function (site) {
   };
   // Allow each theme to modify the configuration object,
   // enabling additional modules etc.
-  require(`./lib/theme-${site.theme}.js`)(site, config);
+  const { default: theme } = await import(`./lib/theme-${site.theme}.js`);
+  theme(site, config);
+
   return config;
 };

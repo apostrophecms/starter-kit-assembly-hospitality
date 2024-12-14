@@ -4,7 +4,7 @@ import { spawnSync as spawn } from 'child_process';
 import themes from '../themes.js';
 
 for (const theme of themes) {
-  const args = [ 'app', ...process.argv.slice(2), '--temporary-site', `--theme=${theme}` ];
+  const args = [ 'app', ...process.argv.slice(2), '--temporary-site', `--theme=${theme.value}` ];
   const result = spawn('node', args, {
     encoding: 'utf8',
     stdio: 'inherit'

@@ -1,4 +1,5 @@
-module.exports = {
+export default {
+  root: import.meta,
   privateDashboards: true,
   modules: {
     '@apostrophecms/uploadfs': {
@@ -8,9 +9,12 @@ module.exports = {
         }
       }
     },
+    '@apostrophecms-pro/multisite-dashboard': {},
     helper: {},
     site: {},
     'site-page': {},
-    asset: {}
+    asset: {},
+    // Use Vite bundler
+    '@apostrophecms/vite': {}
   }
 };

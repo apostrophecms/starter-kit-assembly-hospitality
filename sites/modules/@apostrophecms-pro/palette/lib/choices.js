@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   BASE_SIZES: [
     {
       label: '14px',
@@ -51,6 +51,6 @@ module.exports = {
     {
       label: 'Alfa Slab One',
       value: '"Alfa Slab One", serif'
-    },
+    }
   ]
 };

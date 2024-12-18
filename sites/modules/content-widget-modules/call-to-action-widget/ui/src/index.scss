@@ -1,6 +1,6 @@
 /* stylelint-disable scale-unlimited/declaration-strict-value */
 
-@import "../../../../asset/ui/src/scss/variables";
+@import "Modules/asset/scss/variables";
 
 .call-to-action {
   position: relative;
@@ -11,8 +11,8 @@
   color: $white;
 
   &__screen {
-    position: absolute;
     z-index: 1;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -25,6 +25,7 @@
     position: relative;
     h2 { color: white; }
   }
+
   &__background {
     position: absolute;
     top: 0;

@@ -1,5 +1,7 @@
-const multisite = require('@apostrophecms-pro/multisite');
-const { sdk } = require('./telemetry');
+import multisite from '@apostrophecms-pro/multisite';
+import { sdk } from './telemetry.js';
+import sites from './sites/index.js';
+import dashboard from './dashboard/index.js';
 
 go();
 
@@ -9,6 +11,7 @@ async function go() {
       await sdk.start();
     }
     await multisite({
+      root: import.meta,
       // Default port, for dev
       port: 3000,
       websocket: true,
@@ -36,8 +39,8 @@ async function go() {
       // For development. An environment variable overrides this in staging/production
       mongodbUrl: 'mongodb://localhost:27017',
       sessionSecret: 'CHANGEME',
-      sites: require('./sites/index.js'),
-      dashboard: require('./dashboard/index.js')
+      sites,
+      dashboard
     });
   } catch (e) {
     // eslint-disable-next-line no-console

@@ -289,7 +289,7 @@ You might not need more than one theme. If that's the case, just build out the `
 To configure your list of themes, edit `themes.js`. Right now it looks like:
 
 ```javascript
-module.exports = [
+export default  [
   {
     value: 'default',
     label: 'Default'
@@ -308,7 +308,7 @@ You can add additional themes as needed. Your `value` should be a shortname like
 If your theme is named `default`, then you must have a `sites/lib/theme-default.js` file, like this:
 
 ```javascript
-module.exports = function(site, config) {
+export default  function(site, config) {
   config.modules = {
     ...config.modules,
     'theme-default': {}
@@ -468,7 +468,7 @@ The below Apostrophecms extensions have been included within this starter kit's 
 
     See a basic example of this package below:
     ```js
-    const NodeGeocoder = require('node-geocoder');
+    import NodeGeocoder from 'node-geocoder';
     ```
     Then, you can create a new instance of the "Map" class and add one or more layers to it. For example:
     ```js
@@ -525,7 +525,7 @@ The below Apostrophecms extensions have been included within this starter kit's 
     For usage within this theme, Create an instance of 'aosSchema' in your widget and add it as a field. For example:
     
     ```js
-    const aosSchema = require('../../../lib/aosSchema.js');
+    import aosSchema from '../../../lib/aosSchema.js';
     
     add: {
       ...aosSchema

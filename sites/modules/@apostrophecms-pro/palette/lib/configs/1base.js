@@ -1,6 +1,4 @@
-const choices = require('../choices');
-
-module.exports = {
+export default {
   add: {
     backgroundColor: {
       label: 'Site Background Color',
@@ -93,7 +91,7 @@ module.exports = {
         // 'secondaryAccentColor',
         // 'secondaryAccentColorContrast'
       ]
-    },
+    }
     // typography: {
     //   label: 'Typography',
     //   group: {

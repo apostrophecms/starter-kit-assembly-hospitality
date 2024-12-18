@@ -1,6 +1,6 @@
 /* stylelint-disable selector-class-pattern, declaration-no-important */
 
-@import '../../../../asset/ui/src/scss/variables';
+@import 'Modules/asset/scss/variables';
 @import 'swiper/swiper-bundle.css';
 @import 'photoswipe/photoswipe.css';
 
@@ -9,7 +9,7 @@
   &__swiper {
     padding: 0 2rem;
 
-    .swiper-wrapper {
+    .swiper-wrapper { 
       align-items: center;
     }
 

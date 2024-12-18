@@ -1,5 +1,6 @@
-module.exports = function (site) {
+export default async function (site) {
   const config = {
+    root: import.meta,
     // Theme name is globally available as apos.options.theme
     theme: site.theme,
     nestedModuleSubdirs: true,
@@ -55,7 +56,6 @@ module.exports = function (site) {
       // `asset` supports the project's webpack build for client-side assets.
       helper: {},
       asset: {},
-      settings: {},
 
       // The project's first custom page type.
       'default-page': {},
@@ -90,11 +90,15 @@ module.exports = function (site) {
       // The @apostrophecms/home-page module always exists, no need to activate it here
       '@apostrophecms-pro/palette': {},
       '@apostrophecms-pro/document-versions': {},
+      // Use Vite bundler
+    '@apostrophecms/vite': {},
       websocket: {}
     }
   };
   // Allow each theme to modify the configuration object,
   // enabling additional modules etc.
-  require(`./lib/theme-${site.theme}.js`)(site, config);
+  const { default: theme } = await import(`./lib/theme-${site.theme}.js`);
+  theme(site, config);
+
   return config;
 };

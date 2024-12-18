@@ -1,4 +1,4 @@
-const choices = require('../choices');
+import choices from '../choices.js';
 
 const config = {
   add: {
@@ -37,7 +37,7 @@ const config = {
       label: 'Vertical Padding',
       type: 'range',
       selector: '.navigation',
-      property: ['padding-top', 'padding-bottom'],
+      property: [ 'padding-top', 'padding-bottom' ],
       unit: 'rem',
       min: 0.2,
       max: 5,
@@ -59,4 +59,4 @@ const config = {
   }
 };
 
-module.exports = config;
+export default config;

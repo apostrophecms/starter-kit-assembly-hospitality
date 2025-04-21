@@ -1,7 +1,7 @@
 {
-  "name": "a3-starter-kit-assembly-hospitality",
+  "name": "apostrophe-assembly-demo",
   "version": "1.0.0",
-  "description": "Hospitality multisite starter kit for ApostropheCMS",
+  "description": "Multisite starter kit and demo for ApostropheCMS",
   "private": true,
   "scripts": {
     "build": "APOS_UPLOADFS_ASSETS=1 NODE_ENV=production bash -c 'node app @apostrophecms/asset:build --site=dashboard && ./scripts/for-each-theme @apostrophecms/asset:build'",
@@ -22,11 +22,11 @@
   "license": "MIT",
   "dependencies": {
     "@apostrophecms-pro/advanced-permission": "^3.0.4",
-    "@apostrophecms-pro/automatic-translation": "github:apostrophecms/automatic-translation#main",
-    "@apostrophecms-pro/doc-template-library": "^2.2.2",
-    "@apostrophecms-pro/document-versions": "^1.0.1",
-    "@apostrophecms-pro/multisite": "^4.0.0",
-    "@apostrophecms-pro/multisite-dashboard": "^1.4.0",
+    "@apostrophecms-pro/automatic-translation": "^1.4.0",
+    "@apostrophecms-pro/doc-template-library": "^2.2.5",
+    "@apostrophecms-pro/document-versions": "^2.5.0",
+    "@apostrophecms-pro/multisite": "^4.3.2",
+    "@apostrophecms-pro/multisite-dashboard": "^1.4.1",
     "@apostrophecms-pro/palette": "^4.7.0",
     "@apostrophecms-pro/seo-assistant": "^1.1.1",
     "@apostrophecms/blog": "^1.0.4",

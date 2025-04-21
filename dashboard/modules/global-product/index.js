@@ -3,8 +3,6 @@ module.exports = {
   options: {
     label: 'Product',
     pluralLabel: 'Products',
-    openGraph: false,
-    seoFields: false
   },
   fields: {
     add: {
@@ -39,48 +37,26 @@ module.exports = {
           }
         }
       },
-      relatedDocuments: {
-        type: 'array',
-        label: 'Related Documents',
-        fields: {
-          add: {
-            documentName: {
-              type: 'string',
-              label: 'Document Name'
-            },
-            documentFile: {
-              type: 'attachment',
-              label: 'File',
-              fileGroup: 'office'
-            }
+      image: {
+        type: 'area',
+        label: 'Product Image',
+        options: {
+          max: 1,
+          widgets: {
+            '@apostrophecms/image': {}
           }
         }
-      },
-      _relatedCondition: {
-        type: 'relationship',
-        label: 'Related Condition',
-        withType: 'condition',
-        max: 1,
-        required: true
-      },
+      }
     },
     group: {
       basics: {
         label: 'Basic Information',
-        fields: ['title', 'productId', 'description']
+        fields: ['title', 'productId', 'description', 'image']
       },
       specifications: {
         label: 'Specifications',
         fields: ['specifications']
-      },
-      relationships: {
-        label: 'Relationships',
-        fields: ['_relatedConditions']
-      },
-      resources: {
-        label: 'Resources',
-        fields: ['relatedDocuments']
       }
     }
   }
-};
+}; 

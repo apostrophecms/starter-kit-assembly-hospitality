@@ -10,6 +10,8 @@ module.exports = {
     },
     helper: {},
     '@apostrophecms-pro/multisite-dashboard': {},
+    'global-article': {},
+    'global-product': {},
     site: {
       options: {
         baseUrlDomains: {

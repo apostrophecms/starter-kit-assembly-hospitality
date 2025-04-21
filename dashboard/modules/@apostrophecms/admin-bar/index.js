@@ -1,5 +1,14 @@
 module.exports = {
   options: {
-    pageTree: false
+    pageTree: false,
+    groups: [
+      {
+        label: 'Global Content',
+        items: [
+          'global-article',
+          'global-product'
+        ]
+      },
+    ]
   }
 };

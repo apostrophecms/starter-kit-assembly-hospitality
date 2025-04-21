@@ -3,16 +3,28 @@
 // for each theme
 
 module.exports = [
+  // {
+  //   value: 'default',
+  //   label: 'Default Site'
+  // },
+  // {
+  //   value: 'local',
+  //   label: 'Local Agency'
+  // },
+  // {
+  //   value: 'state',
+  //   label: 'State Agency'
+  // },
   {
-    value: 'default',
-    label: 'Default Site'
+    value: 'brand',
+    label: 'Global Brand'
   },
   {
-    value: 'local',
-    label: 'Local Agency'
+    value: 'campaign',
+    label: 'Campaign Site'
   },
   {
-    value: 'state',
-    label: 'State Agency'
+    value: 'education',
+    label: 'Learning Hub'
   }
 ];

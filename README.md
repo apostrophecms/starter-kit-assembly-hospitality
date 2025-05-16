@@ -386,13 +386,13 @@ More configuration details for `node-geocoder` [noted here](#node-geocoder-confi
 The below Apostrophecms extensions have been included within this starter kit's main apostrophecms `sites/index.js` file.
 
 - [ ] **@apostrophecms/form.** Allows editors to create their own forms for gathering and delivering user input.
-(View extension - https://apostrophecms.com/extensions/form-builder-3-x) 
+(View extension - https://apostrophecms.com/extensions/form-builder-2) 
 - [ ] **@apostrophecms/open-graph.** Provides a way to edit metadata for Facebook's Open Graph standard.
 (View extension - https://apostrophecms.com/extensions/open-graph-tools-3) 
 - [ ] **@apostrophecms/seo.** SEO configuration for ApostropheCMS 3.x. Adds useful meta fields to all pages and pieces.
 (View extension - https://github.com/apostrophecms/apostrophe-seo)
 - [ ] **@apostrophecms/sitemap.** Generates XML and plaintext sitemaps for sites in Apostrophe 3.x.
-(View extension - https://apostrophecms.com/extensions/site-maps-3-x)
+(View extension - https://apostrophecms.com/extensions/site-maps)
 
 #### Themes imported NPM Packages
 

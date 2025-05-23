@@ -122,7 +122,10 @@ export default {
     'image-gallery': {},
     product: {},
     'side-by-side': {},
-    'rich-text': {},
+    '@apostrophecms/rich-text': {
+      toolbar: tiptapTools.all,
+      styles: tiptapStyles.all
+    },
     image: {},
     map: {},
 
@@ -136,7 +139,10 @@ export default {
       label: 'Basic Tools',
       widgets: {
         image: {},
-        'rich-text': {}
+        '@apostrophecms/rich-text': {
+          toolbar: tiptapTools.all,
+          styles: tiptapStyles.all
+        }
       },
       columns: 2
     },
@@ -192,7 +198,10 @@ export default {
     general: {
       label: 'Content Widgets',
       widgets: {
-        'rich-text': {},
+        '@apostrophecms/rich-text': {
+          toolbar: tiptapTools.all,
+          styles: tiptapStyles.all
+        },
         accordion: {},
         'call-to-action': {},
         'custom-form': {},

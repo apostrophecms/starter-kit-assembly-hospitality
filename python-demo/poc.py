@@ -30,7 +30,7 @@ def post(site, path, data):
     base = f"{protocol}{site}{domain}/api/v1/"
     headers = get_authorization(site)
     headers['Content-Type'] = 'application/json'
-    response = requests.post(f"{base}{path}", headers=headers, json=data)
+    response = requests.post(f"{base}{path}?aposMode=draft", headers=headers, json=data)
     if response.status_code == 200:
         return response.json()
     else:
@@ -43,7 +43,7 @@ def patch(site, path, data):
     url = f"{base}{path}"
     print(f"Patching URL: {url}")
     print(f"Data: {json.dumps(data, indent=2)}")
-    response = requests.patch(f"{base}{path}", headers=headers, json=data)
+    response = requests.patch(f"{base}{path}?aposMode=draft", headers=headers, json=data)
     if response.status_code == 200:
         return response.json()
     else:
@@ -52,7 +52,7 @@ def patch(site, path, data):
 def get(site, path):
     base = f"{protocol}{site}{domain}/api/v1/"
     headers = get_authorization(site)
-    response = requests.get(f"{base}{path}", headers=headers)
+    response = requests.get(f"{base}{path}?aposMode=draft", headers=headers)
     if response.status_code == 200:
         return response.json()
     else:
@@ -126,18 +126,21 @@ print("Site created successfully.")
 
 print(f"Site URL is: {site['_siteUrl']}")
 
-# Create an image on the site
+sitePhoto = None
 
-sitePhotoAttachment = upload_attachment(name, './assets/008-the-tiger-who-came-to-tea-pamela-raith-photography.full.jpg')
-
-sitePhoto = post(name, "@apostrophecms/image", {
-  "attachment": sitePhotoAttachment,
-  "title": "Ensemble"
-})
+media = os.listdir('./assets/media')
+for file in media:
+  attachment = upload_attachment(name, f"./assets/media/{file}")
+  photo = post(name, "@apostrophecms/image", {
+    "attachment": attachment,
+    "title": file
+  })
+  if not sitePhoto:
+    sitePhoto = photo
 
 siteHomepage = get(name, "@apostrophecms/page")
 
-siteHomepageId = siteHomepage['_id'] #.replace(':published', ':draft')
+siteHomepageId = siteHomepage['_id']
 
 print(f"Homepage ID is: {siteHomepageId}")
 
@@ -145,6 +148,10 @@ result = patch(name, f"@apostrophecms/page/{siteHomepageId}", {
     "main": {
         "metaType": "area",
         "items": [
+            {
+                "content": '<h1 style="text-align: center">The Tiger Who Came To Tea</h1>',
+                "type": "@apostrophecms/rich-text"
+            },
             {
                 "_image": [
                     sitePhoto
@@ -155,9 +162,11 @@ result = patch(name, f"@apostrophecms/page/{siteHomepageId}", {
     }
 })
 
-print(result)
+result = post(name, f"@apostrophecms/page/{siteHomepageId}/publish", {})
+# print("Result of publish:")
+# print(result)
 
-print(get(name, f"@apostrophecms/page/{siteHomepageId}"))
+# print(get(name, f"@apostrophecms/page/{siteHomepageId}"))
 
 print("Image added to homepage successfully.")
 

@@ -1,4 +1,4 @@
-# Apostrophe Assembly Hospitality Boilerplate
+# Client Demo for Activity Stream
 
 <!-- TOC is auto generated via VSCode extensions https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one.
 Having it installed in your VSCode will ensure that adding/changing heading will be auto-populated here. -->
@@ -46,7 +46,7 @@ Having it installed in your VSCode will ensure that adding/changing heading will
 
 This repo is a combination of those two repos:
 - `starter-kit-hospitality`
-- `starter-kit-assembly-essentials` 
+- `starter-kit-assembly-essentials`
 
 What this means is that this repo serves as a quick start boilerplate for multisite-enabled, cloud-hosted projects based on and hosted via Apostrophe Assembly while also providing hospitality and restaurant-themed widgets and features from the get-go (menus, maps, galleries, pricing, team members etc...). Technically speaking, it serves as a working example of a project built on the `@apostrophecms-pro/multisite` module while retaining the hospitality starter kit's features.
 
@@ -57,7 +57,7 @@ This boilerplate project includes:
 * An example of project-level frontend asset generation via a modern webpack build.
 * Best practices for easy hostname configuration in dev, staging and prod environments.
 * Support for multiple themes.
-* 
+*
 
 ## First Steps: required before startup
 
@@ -100,7 +100,7 @@ These options apply only when the hostname is determined in part by the `shortNa
 
 ### Changing the locale separator of your subdomains (optional)
 
-The `localeSeparator` configuration option, which defaults to `.`, allows you to change how the subdomains for localized sites (if chosen so) will be built. By default a dot separator will be used. For example, if "Separate Host" is enabled for a particular locale, `fr.gourmet.your-domain.com` will be the URL of a site with the short name `gourmet` and the `fr` locale. 
+The `localeSeparator` configuration option, which defaults to `.`, allows you to change how the subdomains for localized sites (if chosen so) will be built. By default a dot separator will be used. For example, if "Separate Host" is enabled for a particular locale, `fr.gourmet.your-domain.com` will be the URL of a site with the short name `gourmet` and the `fr` locale.
 If you apply the following configuration:
 ```js
 multisite({
@@ -108,13 +108,13 @@ multisite({
   localeSeparator: '-',
 });
 ```
-The hostname above will become `fr-gourmet.your-domain.com`. 
+The hostname above will become `fr-gourmet.your-domain.com`.
 
 This option applies only when the hostname is determined in part by the `shortName` field for the site, so if a production hostname is configured for the locale it will be used exactly as given.
 
 > **Note:** Your configuration won't be applied immediately on the existing sites. You need to update ("touch") your site records in order to apply the changes. You can do that for all existing sites via the CLI command `node app site:touch --site=dashboard`. If you do not have the `touch` task, update the apostrophe module to the latest 3.x version.
 
-> **Note:** This option is not currently supported by Apostrophe Assembly Hospitality Hosting, as we apply the naming convention for you when hosting for you. It's there for self-hosted customers with different needs. 
+> **Note:** This option is not currently supported by Apostrophe Assembly Hospitality Hosting, as we apply the naming convention for you when hosting for you. It's there for self-hosted customers with different needs.
 
 ### Setting your Dashboard shortname (optional)
 
@@ -125,7 +125,7 @@ multisite({
   dashboardShortName: 'admin',
 });
 ```
-With the setting above, the Dashboard application will be available at `http://admin.localhost:3000`, `https://admin.staging.your-domain.com`, etc. 
+With the setting above, the Dashboard application will be available at `http://admin.localhost:3000`, `https://admin.staging.your-domain.com`, etc.
 
 Note that if `shortNameSuffix` is also set, the two options are combined to arrive at the complete dashboard subdomain.
 
@@ -386,9 +386,9 @@ More configuration details for `node-geocoder` [noted here](#node-geocoder-confi
 The below Apostrophecms extensions have been included within this starter kit's main apostrophecms `sites/index.js` file.
 
 - [ ] **@apostrophecms/form.** Allows editors to create their own forms for gathering and delivering user input.
-(View extension - https://apostrophecms.com/extensions/form-builder-3-x) 
+(View extension - https://apostrophecms.com/extensions/form-builder-3-x)
 - [ ] **@apostrophecms/open-graph.** Provides a way to edit metadata for Facebook's Open Graph standard.
-(View extension - https://apostrophecms.com/extensions/open-graph-tools-3) 
+(View extension - https://apostrophecms.com/extensions/open-graph-tools-3)
 - [ ] **@apostrophecms/seo.** SEO configuration for ApostropheCMS 3.x. Adds useful meta fields to all pages and pieces.
 (View extension - https://github.com/apostrophecms/apostrophe-seo)
 - [ ] **@apostrophecms/sitemap.** Generates XML and plaintext sitemaps for sites in Apostrophe 3.x.
@@ -396,13 +396,13 @@ The below Apostrophecms extensions have been included within this starter kit's 
 
 #### Themes imported NPM Packages
 
-- [ ] **rfs (Responsive Font Sizing).** The "rfs" package is a node.js module that provides a simple way to create responsive and fluid typography in CSS. It allows you to define font sizes using a unitless value (usually "rem") and automatically adjust them based on the viewport or container width. 
+- [ ] **rfs (Responsive Font Sizing).** The "rfs" package is a node.js module that provides a simple way to create responsive and fluid typography in CSS. It allows you to define font sizes using a unitless value (usually "rem") and automatically adjust them based on the viewport or container width.
 
     Mainly used within `sites/modules/asset/ui/src/_typography.scss` file for consistent rem based font sizing. Usage applied to headings and paragraphs.
-    
+
     E.g ``` @include font-size($h1-font-size)```
     where $h1-font-size is a rem value determined by a base value.
-    
+
     in this theme a default of 16px: ```$h1-font-size: $font-size-base * 3; // 48px```
 - [ ] **swiper (Slideshows).** The "swiper" package is a JavaScript library for creating responsive and touch-enabled sliders, carousels, and other interactive content on the web. Its usage within this theme is located at `sites/modules/content-widget-modules/image-gallery-widget`
 
@@ -416,22 +416,22 @@ The below Apostrophecms extensions have been included within this starter kit's 
       // Optional parameters
       direction: 'horizontal',
       loop: true,
-    
+
       // Navigation arrows
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-    
+
       // And more...
     });
     ```
 - [ ] **photoswipe (Lightbox)** "PhotoSwipe Lightbox" is a plugin for the popular JavaScript library "PhotoSwipe" that simplifies the process of creating responsive image galleries with lightbox functionality. It offers an easy-to-use API for adding lightboxes to your images and is highly customizable and flexible.
 
     Its usage within this theme is located at `sites/modules/content-widget-modules/image-gallery-widget`, and is applied in conjunction with the swiper npm package.
-    
+
     You can import it in your JavaScript file using the import statement:
-    
+
     ```js
     import PhotoSwipeLightbox from 'photoswipe/lightbox';
     import PhotoSwipe from 'photoswipe';
@@ -448,20 +448,20 @@ The below Apostrophecms extensions have been included within this starter kit's 
         children: 'a',
         loop: true,
         showHideAnimationType: 'fade', /* options: fade, zoom, none */
-        
+
         /* Click on image moves to the next slide */
         imageClickAction: 'next',
         tapAction: 'next',
-        
+
         /* ## Hiding a specific UI element ## */
         zoom: false,
         close: true,
         counter: true,
         arrowKeys: true
     };
-    
+
     const lightbox = new PhotoSwipeLightbox(photoSwipeOptions);
-    
+
     lightbox.init();
     ```
 - [ ] [**Node-geocoder**](#node-geocoder-config) is an npm package that simplifies geocoding and reverse-geocoding in Node.js. It supports various geocoding services, allowing developers to convert addresses to coordinates and vice versa with ease.
@@ -476,7 +476,7 @@ The below Apostrophecms extensions have been included within this starter kit's 
       // For a full list of the node-geocoder npm package options please view the modules documentation - https://www.npmjs.com/package/node-geocoder
       // Requred
       provider: 'mapbox',
-    
+
       // Optional depending on the providers
       apiKey: 'include provider apikey', // for Mapquest, OpenCage, Google Premier
       formatter: null, // 'gpx', 'string', ...
@@ -512,21 +512,21 @@ The below Apostrophecms extensions have been included within this starter kit's 
 - [ ] **AOS (Animations)** Animate On Scroll (AOS) library allows you to animate elements as you scroll down and up. If you scroll back to top, elements will animate to their previous state and are ready to animate again if you scroll down.
 
     You can import it in your JavaScript file (`sites/modules/asset/ui/src/index.js`) using the import statement:
-    
+
     ```js
     import AOS from 'aos';
     ```
     Then, initialize AOS. For example:
-    
+
     ```js
     AOS.init();
     ```
-    
+
     For usage within this theme, Create an instance of 'aosSchema' in your widget and add it as a field. For example:
-    
+
     ```js
     import aosSchema from '../../../lib/aosSchema.js';
-    
+
     add: {
       ...aosSchema
     }

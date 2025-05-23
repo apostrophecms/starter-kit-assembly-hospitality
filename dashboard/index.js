@@ -1,3 +1,5 @@
+import { api } from "@opentelemetry/sdk-node";
+
 export default {
   root: import.meta,
   privateDashboards: true,
@@ -15,6 +17,15 @@ export default {
     'site-page': {},
     asset: {},
     // Use Vite bundler
-    '@apostrophecms/vite': {}
+    '@apostrophecms/vite': {},
+    '@apostrophecms/express': {
+      options: {
+        apiKeys: {
+          [process.env.AS_DASHBOARD_API_KEY]: {
+            role: 'admin'
+          }
+        }
+      }
+    }
   }
 };

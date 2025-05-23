@@ -81,6 +81,11 @@ export default async function (site) {
         options: {
           session: {
             secret: 'CHANGEME'
+          },
+          apiKeys: {
+            [process.env.AS_SITES_API_KEY]: {
+              role: 'admin'
+            }
           }
         }
       },

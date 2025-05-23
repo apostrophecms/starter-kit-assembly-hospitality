@@ -1,7 +1,7 @@
 {
-  "name": "starter-kit-assembly-hospitality",
+  "name": "client-demo-activity-stream",
   "version": "1.0.0",
-  "description": "Hospitality multisite starter kit for ApostropheCMS",
+  "description": "Client demo for Activity Stream",
   "type": "module",
   "private": true,
   "scripts": {
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/apostrophecms/starter-kit-assembly-hospitality"
+    "url": "https://github.com/apostrophecms/starter-kit-assembly-hospitality#activity-stream"
   },
   "engines": {
     "node": ">=10.0.0"

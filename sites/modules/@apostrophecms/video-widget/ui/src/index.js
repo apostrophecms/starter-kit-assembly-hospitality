@@ -79,8 +79,6 @@ export default () => {
           before.setAttribute('src', el.getAttribute('data-overlay'));
           before.setAttribute('class', 'apos-video-overlay');
           before.style.position = 'absolute';
-          before.style.margin = 'auto';
-          before.style.zIndex = 2;
         }
 
         shaker.innerHTML = html;

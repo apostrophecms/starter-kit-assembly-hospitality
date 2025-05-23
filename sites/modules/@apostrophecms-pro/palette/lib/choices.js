@@ -29,6 +29,10 @@ export default {
   ],
   BASE_FONTS: [
     {
+      label: 'Abril Fatface',
+      value: '"Abril Fatface", serif'
+    },
+    {
       label: 'Roboto',
       value: '"Roboto", sans-serif'
     },

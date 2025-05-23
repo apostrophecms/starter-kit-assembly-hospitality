@@ -1,9 +1,9 @@
 import choices from '../choices.js';
 
-const h1 = baseProperties('heading1', 'Heading 1', '.heading-1');
-const h2 = baseProperties('heading2', 'Heading 2', '.heading-2');
-const h3 = baseProperties('heading3', 'Heading 3', '.heading-3');
-const p = baseProperties('body', 'Body Copy', '.body-copy');
+const h1 = baseProperties('heading1', 'Heading 1', '[data-rich-text] h1, [contenteditable] h1', 48);
+const h2 = baseProperties('heading2', 'Heading 2', '[data-rich-text] h2, [contenteditable] h2', 40);
+const h3 = baseProperties('heading3', 'Heading 3', '[data-rich-text] h3, [contenteditable] h3', 32);
+const p = baseProperties('body', 'Body Copy', '[data-rich-text] p, [contenteditable] p', 16);
 
 export default {
   add: {
@@ -37,7 +37,7 @@ export default {
   }
 };
 
-function baseProperties(name, label, selector) {
+function baseProperties(name, label, selector, fontSize) {
   return {
     name,
     label,
@@ -49,7 +49,8 @@ function baseProperties(name, label, selector) {
         type: 'select',
         selector,
         property: 'font-family',
-        choices: choices.BASE_FONTS
+        choices: choices.BASE_FONTS,
+        def: '"Abril Fatface", serif'
       },
       [`${name}Size`]: {
         label: 'Size',
@@ -59,7 +60,7 @@ function baseProperties(name, label, selector) {
         unit: 'px',
         min: 10,
         max: 120,
-        def: 14
+        def: fontSize
       },
       [`${name}LetterSpacing`]: {
         label: 'Letter Spacing',

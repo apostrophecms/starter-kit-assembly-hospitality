@@ -4,6 +4,7 @@ export default async function (site) {
     // Theme name is globally available as apos.options.theme
     theme: site.theme,
     nestedModuleSubdirs: true,
+    bundles: [ '@apostrophecms-pro/automatic-translation' ],
     modules: {
       // Apostrophe module configuration
       // *******************************
@@ -95,8 +96,18 @@ export default async function (site) {
       // The @apostrophecms/home-page module always exists, no need to activate it here
       '@apostrophecms-pro/palette': {},
       '@apostrophecms-pro/document-versions': {},
+      '@apostrophecms-pro/automatic-translation': {
+        options: {
+          provider: 'deepl'
+        }
+      },
+      '@apostrophecms-pro/automatic-translation-deepl': {
+        options: {
+          apiSecret: process.env.APOS_DEEPL_API_SECRET
+        }
+      },
       // Use Vite bundler
-    '@apostrophecms/vite': {},
+      '@apostrophecms/vite': {},
       websocket: {}
     }
   };

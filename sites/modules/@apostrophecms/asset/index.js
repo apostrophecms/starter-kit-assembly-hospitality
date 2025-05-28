@@ -1,8 +1,7 @@
 export default {
   options: {
     // When not in production, refresh the page on restart
-    refreshOnRestart: true,
-    hmr: 'apos'
+    refreshOnRestart: true
   },
   methods(self) {
     return {

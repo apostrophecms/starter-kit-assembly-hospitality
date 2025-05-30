@@ -24,6 +24,5 @@ export default {
   },
   'pricing-widget': {},
   'side-by-side-widget': {},
-  'image-widget': {},
-  'rich-text-widget': {}
+  'image-widget': {}
 };

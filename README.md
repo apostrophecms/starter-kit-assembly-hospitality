@@ -16,7 +16,6 @@ Having it installed in your VSCode will ensure that adding/changing heading will
     - [Operating System: Mac, Linux, or Virtual Linux](#operating-system-mac-linux-or-virtual-linux)
     - [Software Installation Requirements](#software-installation-requirements)
     - [`/etc/hosts` File Configuration Requirements](#etchosts-file-configuration-requirements)
-    - [`/etc/hosts` File Configuration Requirements](#etchosts-file-configuration-requirements-1)
   - [Starting Up In Development](#starting-up-in-development)
   - [Scheduling tasks with Apostrophe Assembly Hospitality hosting](#scheduling-tasks-with-apostrophe-assembly-hospitality-hosting)
   - [Site Development](#site-development)
@@ -150,27 +149,10 @@ In `sites/index.js`, locate `secret` and change `CHANGEME` to a random string of
 
 To test-drive the project in development, make sure you have Apostrophe's usual dependencies on your local machine:
 
-* MongoDB (5.0 or better, we recommend 6.0)
+* MongoDB (6.0 or better, we recommend 8.0)
 * NodeJS (18.x or better, latest long term support release recommended)
 
 For more information see the Apostrophe [Development Setup](https://docs.apostrophecms.org/guide/development-setup.html) and [Windows Development](https://docs.apostrophecms.org/cookbook/windows-development.html) documentation.
-
-### `/etc/hosts` File Configuration Requirements
-
-Because this project serves multiple websites, certain hostnames must point directly to your own computer for local testing.
-
-**If you will only be testing in Chrome at first,** you do not have to edit your hosts file right away. That's because in Chrome, all subdomains of `localhost` resolve to your own computer.
-
-**If you are running on a Mac,** and your Cypress tests are failing with an error `getaddrinfo ENOTFOUND`, you may need to modify your hosts file by following the instructions below.
-
-However, in other browsers this is not true and you must add the following lines to `/etc/hosts` before proceeding:
-
-```
-127.0.0.1 dashboard.localhost company1.localhost
-```
-
-**You will need a subdomain for each test site you plan to add to the multisite platform.** See the example below, where a site called `company` is added to the platform via the dashboard. You can always add more of these entries later.
-
 
 ### `/etc/hosts` File Configuration Requirements
 

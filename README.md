@@ -143,19 +143,16 @@ In `sites/index.js`, locate `secret` and change `CHANGEME` to a random string of
 
 ### Operating System: Mac, Linux, or Virtual Linux
 
-**Your local development environment must be either MacOS or Linux.** If your development computer runs Windows, we recommend development on Ubuntu Linux in a full virtual Linux machine, via [VirtualBox](https://www.virtualbox.org/).
-
-Another option is to use the Windows Subsystem for Linux, which is also an Ubuntu Linux-based environment. However this option has not been extensively tested with Assembly.
+**Your local development environment must be either MacOS or Linux.** If your development computer runs Windows, we recommend development on Ubuntu Linux in a full virtual Linux machine. This can be through [WSL2 (Windows Subsystem for Linux)](https://learn.microsoft.com/en-us/windows/wsl/install) or via [VirtualBox](https://www.virtualbox.org/).
 
 ### Software Installation Requirements
 
 To test-drive the project in development, make sure you have Apostrophe's usual dependencies on your local machine:
 
-* MongoDB (4.4.x or better)
-* NodeJS (14.x or better, latest long term support release recommended)
-* Imagemagick (for fast, high-quality image rendering)
+* MongoDB (6.0 or better, we recommend 8.0)
+* NodeJS (18.x or better, latest long term support release recommended)
 
-For more information see the Apostrophe [Getting Started Tutorial](https://docs.apostrophecms.org/getting-started/setting-up-your-environment.html).
+For more information see the Apostrophe [Development Setup](https://docs.apostrophecms.org/guide/development-setup.html) and [Windows Development](https://docs.apostrophecms.org/cookbook/windows-development.html) documentation.
 
 ### `/etc/hosts` File Configuration Requirements
 
@@ -386,13 +383,13 @@ More configuration details for `node-geocoder` [noted here](#node-geocoder-confi
 The below Apostrophecms extensions have been included within this starter kit's main apostrophecms `sites/index.js` file.
 
 - [ ] **@apostrophecms/form.** Allows editors to create their own forms for gathering and delivering user input.
-(View extension - https://apostrophecms.com/extensions/form-builder-3-x) 
+(View extension - https://apostrophecms.com/extensions/form-builder-2) 
 - [ ] **@apostrophecms/open-graph.** Provides a way to edit metadata for Facebook's Open Graph standard.
 (View extension - https://apostrophecms.com/extensions/open-graph-tools-3) 
 - [ ] **@apostrophecms/seo.** SEO configuration for ApostropheCMS 3.x. Adds useful meta fields to all pages and pieces.
 (View extension - https://github.com/apostrophecms/apostrophe-seo)
 - [ ] **@apostrophecms/sitemap.** Generates XML and plaintext sitemaps for sites in Apostrophe 3.x.
-(View extension - https://apostrophecms.com/extensions/site-maps-3-x)
+(View extension - https://apostrophecms.com/extensions/site-maps)
 
 #### Themes imported NPM Packages
 

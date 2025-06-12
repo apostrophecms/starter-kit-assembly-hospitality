@@ -3,7 +3,7 @@ const config = {
     footerBgColor: {
       label: 'Background color',
       type: 'color',
-      selector: '.footer',
+      selector: 'body .footer',
       property: 'background-color'
     },
     footerTextColor: {
@@ -25,7 +25,7 @@ const config = {
     footerPadding: {
       label: 'Vertical padding',
       type: 'range',
-      selector: '.footer',
+      selector: 'body .footer',
       unit: 'px',
       property: [
         'padding-top',

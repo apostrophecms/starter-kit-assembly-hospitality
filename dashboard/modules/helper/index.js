@@ -4,7 +4,7 @@ const widgets = {
 
 export default {
   options: {
-    alias: 'helpers',
+    alias: 'helpers'
   },
   helpers(self, options) {
     return {

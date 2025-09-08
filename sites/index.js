@@ -91,7 +91,7 @@ export default async function (site) {
       '@apostrophecms-pro/palette': {},
       '@apostrophecms-pro/document-versions': {},
       // Use Vite bundler
-    '@apostrophecms/vite': {},
+      '@apostrophecms/vite': {},
       websocket: {}
     }
   };

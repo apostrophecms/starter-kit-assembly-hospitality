@@ -39,7 +39,8 @@ export default {
                   'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                  // Since this key is visible to the Apostrophe application code in production,
+                  // Since this key is visible
+                  // to the Apostrophe application code in production,
                   // it is only capable of one thing: asking nicely that certificates be
                   // generated, if it's time and they are needed, for sites
                   // that are already in the system. Thus not a security risk

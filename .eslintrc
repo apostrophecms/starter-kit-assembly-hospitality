@@ -1,6 +1,0 @@
-{
-  "extends": "apostrophe",
-  "globals": {
-    "apos": true
-  }
-}

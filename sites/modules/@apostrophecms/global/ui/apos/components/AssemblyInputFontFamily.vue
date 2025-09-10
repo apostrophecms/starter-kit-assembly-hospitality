@@ -9,11 +9,13 @@
     <template #body>
       <div class="apos-input-wrapper">
         <select
-          class="apos-input apos-input--select" :id="uid"
+          :id="uid"
           v-model="next"
+          class="apos-input apos-input--select"
         >
           <option
-            v-for="choice in choices" :key="choice.value"
+            v-for="choice in choices"
+            :key="choice.value"
             :value="choice.value"
             :selected="choice.value === value.data"
           >

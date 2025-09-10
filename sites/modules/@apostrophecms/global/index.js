@@ -113,7 +113,10 @@ export default {
     return {
       beforeSave: {
         addFontFamilies(req, doc, options) {
-          if (!doc.googleFontScript && (!req.data.global || !req.data.global.googleFontScript)) {
+          if (
+            !doc.googleFontScript &&
+            (!req.data.global || !req.data.global.googleFontScript)
+          ) {
             return;
           }
           try {
@@ -184,7 +187,10 @@ export default {
       name: 'assemblyFontFamily',
       convert: async function (req, field, data, object) {
         const choices = req.data.global.fontFamilies || [];
-        object[field.name] = self.apos.launder.select(data[field.name], choices, field.def);
+        object[field.name] = self.apos.launder.select(
+          data[field.name],
+          choices, field.def
+        );
       },
       vueComponent: 'AssemblyInputFontFamily'
     });

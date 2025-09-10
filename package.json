@@ -49,8 +49,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
-    "eslint": "^8.0.0",
-    "eslint-config-apostrophe": "^4.0.0",
+    "eslint-config-apostrophe": "^6.0.1",
     "nodemon": "^3.0.1",
     "stylelint": "^15.0.0",
     "stylelint-config-apostrophe": "^3.0.0"

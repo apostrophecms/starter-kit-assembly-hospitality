@@ -8,7 +8,7 @@ const apostropheWidgets = {
 
 export default {
   all: {
-    columns: {},
+    '@apostrophecms/layout': {},
     'call-to-action': {},
     'custom-form': {},
     'image-gallery': {},
@@ -62,7 +62,7 @@ export default {
     layout: {
       label: 'Layout Tools',
       widgets: {
-        columns: {},
+        '@apostrophecms/layout': {},
         'side-by-side': {}
       },
       columns: 2

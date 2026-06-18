@@ -1,3 +1,11 @@
+> [!WARNING]
+> **This repository is deprecated and no longer maintained.**
+>
+> We recommend migrating to our actively maintained ApostropheCMS Assembly starter kit:
+>
+> - **[Assembly Essentials](https://github.com/apostrophecms/starter-kit-assembly-essentials)**: a clean, minimal starting point for multisite ApostropheCMS projects.
+>- You can also read more about the architecture of the standalone [Essentials](https://apostrophecms.com/docs/guide/apostrophe-standalone-essentials-overview.html) project, a clean, minimal starting point for standalone ApostropheCMS projects
+
 # Apostrophe Assembly Hospitality Boilerplate
 
 <!-- TOC is auto generated via VSCode extensions https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one.
@@ -21,17 +29,7 @@ Having it installed in your VSCode will ensure that adding/changing heading will
   - [Site Development](#site-development)
     - [Where Does My Apostrophe Project Code Go?](#where-does-my-apostrophe-project-code-go)
     - [Themes](#themes)
-      - [Adding a New Theme](#adding-a-new-theme)
-      - [Custom Module Configuration for Themes](#custom-module-configuration-for-themes)
-      - [Modern Frontend Assets Without A Custom Build Process](#modern-frontend-assets-without-a-custom-build-process)
-      - [Frontend Assets With Your Own Build Process](#frontend-assets-with-your-own-build-process)
-      - [Developing For IE11](#developing-for-ie11)
-      - [Serving Static Files: Fonts and Static Images](#serving-static-files-fonts-and-static-images)
     - [Hospitality Specificities](#hospitality-specificities)
-      - [Theming](#theming)
-      - [Maps and Geocoding](#maps-and-geocoding)
-      - [Apostrophecms module extensions](#apostrophecms-module-extensions)
-      - [Themes imported NPM Packages](#themes-imported-npm-packages)
     - [Palette Configuration](#palette-configuration)
   - [Dashboard Development](#dashboard-development)
     - [Allowing dashboard admins to pass configuration to sites](#allowing-dashboard-admins-to-pass-configuration-to-sites)
